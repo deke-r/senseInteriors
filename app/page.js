@@ -1,95 +1,87 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Navbar from "@/components/Navbar";
+import Carousel from "@/components/Carousel";
+import HeroSection from "@/components/hero-section"
+import ServicesSection from "@/components/services-section"
+import WhoWeAreSection from "@/components/who-we-are-section"
+import CallToActionSection from "@/components/call-to-action-section"
+import WhyChooseUsSection from "@/components/why-choose-us-section"
+import ServicesSkillSection from "@/components/services-skill-section"
+import BackgroundContentSection from "@/components/background-content-section"
+import ClientsSection from "@/components/Clients-section"
+import TestimonialsSection from "@/components/testimonials-section"
+import Footer from "@/components/Footer"
+
+import { designServices, whyChooseUs, serviceSkills, testimonials } from "@/data/content"
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main>
+        <div className="banner-top">
+        <Carousel />
+        <div className="video-overlay"></div>
+        <Navbar />
+      </div>
+      <HeroSection
+        title="Are you looking for the Most Experienced Interior Designers & Architects?"
+        areas={[
+          "Basement",
+          "Bathroom",
+          "Bedroom",
+          "Dining Room",
+          "Family Room",
+          "Kitchen",
+          "Living room",
+          "Nursery",
+          "Outdoor",
+          "living home",
+        ]}
+        subtitle="Best Interior Designing & Architectural Company Based in Delhi Noida, Gurgaon, Faridabad & Ghaziabad."
+        description="Sense Interiors is an interior designing and architectural company that was established in 1998. We specialize in balancing interior design and architecture services and crafting beautiful designs for your needs. With a team of designers, we have successfully completed over 1300 projects across Pan India, offering a diverse range of balancing packages."
+        additionalText="In truth, We offer a wide range of design and architectural services surrounding residential and commercial projects. Our expertise extends to apartments, homes, offices, salons, restaurants, and home interiors with architectural renovations. With this personalized consultation and turnkey solutions, we aim uniquely to create unique and aesthetic spaces that reflect your individual style and preferences."
+        welcomeTitle="Welcome to India's Leading, Most Experienced Interior Designers & Architectural Firm"
+        imageSrc="/placeholder.svg?height=400&width=500"
+      />
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+      <WhoWeAreSection
+        mainImage="/placeholder.svg?height=400&width=500"
+        infoTitle="Get Your Free consulting"
+        infoLinkText="CLICK HERE!"
+        infoLinkUrl="#"
+        infoDescription="If you are confusing? Do not worry. We offer a free consultation to help you make a decision with the best creativity and quality that you deserve."
+        title="Who We Are?"
+        subtitle="Sense Interior Pvt. Ltd is a renowned nationwide interior design and architectural company that excels in providing good quality services at competitive and flexible prices. Our track record of successful project completions showcases our ability to optimize budgets by leveraging our vast experience and industry expertise."
+        description="Moreover, As a premier interior designer and architectural company, we boast a team of leading and highly experienced professionals. We recognize the challenges clients face in selecting the right firm, we offer wide solutions that are our priority quality, costing, performance, trustworthiness, reliability, and timely delivery. Our commitment is to exceed expectations, ensuring utmost client satisfaction in every aspect."
+        additionalText="Similarly, we create functionality as a crucial aspect of designed spaces, helping seamless daily task performance with comfort. In the field of interior design and architecture, the integration of functional elements ensures that spaces not only visually appeal but also serve their intended purpose efficiently."
+        contactNumber="+91 9821995637"
+      />
+
+      <ServicesSection services={designServices} />
+
+      <CallToActionSection
+        title="Looking for high quality services for your project Residential, Industrial Hotels & Resorts? Call Now"
+        phoneNumber="+91 9821995637"
+      />
+
+      <WhyChooseUsSection items={whyChooseUs} />
+
+      <ServicesSkillSection
+        title="Quality Which Makes us Different From others as Interior Designing Company"
+        phoneNumber="+91 9319412012"
+        skills={serviceSkills}
+      />
+
+      <BackgroundContentSection
+        title="Complete Interior Designing & Architectural Solution"
+        description="Our Interior design solution contains a careful selection process for wall paints, textures, patterns, ceiling and flooring options. Our team of architects of making the structure of place prioritize balanced combinations of furniture design, colour, texture, and patterns, ensuring a cohesive and unique interior design that highlights the desired atmosphere and brings out the best features of each structure."
+        additionalText="Moreover, prior to project initiation, our team imparts extensive knowledge about furniture and installations. Our supervision is important, ensuring flawless, meticulously designed interiors goes credit for project success goes to our highly skilled and experienced interior design team, guaranteeing excellence in every part of the process."
+        furtherText="Sense Interiors with architecture excels in residential, commercial, industrial, and hotel space design. With the renowned and creative for our creative prowess, we've decorated India with prestigious projects. Our detailed sketches encompass furniture layouts, ceiling designs, electrical plans, woodwork, wall concepts, and flooring details, ensuring a thorough understanding."
+      />
+
+      <ClientsSection />
+
+      <TestimonialsSection testimonials={testimonials} imageSrc="/placeholder.svg?height=400&width=500" />
+
+      <Footer />
+    </main>
+  )
 }

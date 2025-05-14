@@ -1,0 +1,140 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.carousel-item .carousel-text-title,
+.carousel-item .carousel-text-desc {
+  opacity: 0;
+}
+
+.carousel-item.active .carousel-text-title {
+  animation: fadeInUp 1s ease forwards;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.carousel-item.active .carousel-text-desc {
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.5s;
+  font-size: 18px;
+}
+
+.carousel-text-button {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0;
+  transition: color 0.3s ease;
+}
+
+.carousel-item.active .carousel-text-button {
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.carousel-text-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary);
+  z-index: -1;
+  transition: left 0.5s ease;
+}
+
+.carousel-text-button:hover::before {
+  left: 0;
+}
+
+.carousel-text-button:hover {
+  color: #fff !important;
+}
+
+/* Caption Positioning */
+.caption-left {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 100px;
+  right: auto;
+  text-align: left;
+  align-items: flex-start;
+  padding: 40px 60px;
+  max-width: 800px;
+  z-index: 100;
+}
+
+.caption-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 100px;
+  left: auto;
+  text-align: left;
+  align-items: flex-start;
+  padding: 40px 60px;
+  max-width: 800px;
+  z-index: 100;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .caption-left,
+  .caption-right {
+    left: 30px !important;
+    right: 30px !important;
+    padding: 30px 20px !important;
+    max-width: unset !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-caption {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    left: 20px !important;
+    right: 20px !important;
+    text-align: left !important;
+    align-items: flex-start !important;
+    padding: 20px 16px !important;
+  }
+
+  .carousel-caption h1 {
+    font-size: 2rem !important;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem !important;
+  }
+
+  .carousel-text-button {
+    padding: 10px 24px !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-caption h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .carousel-caption p {
+    font-size: 0.9rem !important;
+  }
+
+  .carousel-text-button {
+    padding: 8px 20px !important;
+    font-size: 0.85rem !important;
+  }
+}
+
+
