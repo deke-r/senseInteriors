@@ -1,0 +1,56 @@
+.link-btn-info {
+  position: relative;
+  background-color: var(--primary);
+}
+
+.link-btn-info:hover{
+    border: 1px solid var(--primary);
+}
+
+.link-btn-info:before,
+.link-btn-info:after {
+  content: "";
+  position: absolute;
+  background: #1a1a1a;
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+}
+
+.link-btn-info:before {
+  width: calc(100% + 2px);
+  height: 1px;
+  bottom: -6px;
+  left: 10px;
+}
+
+.link-btn-info:after {
+  width: 1px;
+  height: calc(100% + 2px);
+  top: 14px;
+  right: -6px;
+}
+
+.link-btn-info:hover:before,
+.link-btn-info:active:before,
+.link-btn-info:focus:before {
+  width: 0;
+}
+
+.link-btn-info:hover:after,
+.link-btn-info:active:after,
+.link-btn-info:focus:after {
+  height: 0;
+}
+
+.link-btn-info:before,
+.link-btn-info:after {
+  background: #fff;
+}
+
+.link-btn-info.dark-mode:before,
+.link-btn-info.dark-mode:after {
+  background: #0a0a0a;
+}

@@ -1,0 +1,23 @@
+
+
+.card-services {
+  background-image: url('/img/bg-iconbox1.webp');
+ padding: 40px 15px 40px 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  transition: all 0.4s ease;
+  background-color: #fff;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  font-family: "Poppins", sans-serif;
+}
+
+.card-services:hover {
+  background-image: url('/img/bg-iconbox1-hover.webp');
+}
+
+.card-services:hover .csh {
+  color: white !important;
+}

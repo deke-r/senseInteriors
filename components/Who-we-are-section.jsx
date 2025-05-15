@@ -1,3 +1,4 @@
+import LinkButton from "./LinkButton";
 
 
 export default function WhoWeAreSection({
@@ -13,37 +14,37 @@ export default function WhoWeAreSection({
   contactNumber,
 }) {
   return (
-    <section className="py-5 bg-light">
+    <section className="py-5 bg-who-we-are">
       <div className="container">
         <div className="row">
-          <div className="col-md-6 mb-4 mb-md-0">
-            <div className="position-relative">
-              <img src={mainImage || "/placeholder.svg"} alt="Who we are" className="img-fluid rounded w-100" />
-              <div className="position-absolute bottom-0 left-0 w-100 text-center p-4 bg-dark bg-opacity-75 text-white">
-                <h4>{infoTitle}</h4>
-                <br />
-                <a className="btn btn-primary" href={infoLinkUrl}>
-                  {infoLinkText}
-                </a>
+          <div className="col-lg-6 mb-4 mb-md-0 postion-relative">
+            <div className="margin-overlay">
+              <img src={mainImage || "/placeholder.svg"} alt="Who we are" className="img-fluid  w-100" />
+              <div className=" w-100 text-center p-4  text-white">
+                <h4 className="text-light f_19 text-uppercase text-center">{infoTitle}</h4>
+                <div className="text-center">
+                <LinkButton title={infoLinkText} href={infoLinkUrl}/>
+                </div>
+              
               </div>
-              <p className="mt-3 text-muted">{infoDescription}</p>
+              <p className="mt-3 text-light">{infoDescription}</p>
             </div>
           </div>
-          <div className="col-md-6">
-            <div className="bg-dark text-white p-4 rounded">
+          <div className="col-lg-6 position-relative">
+            <div className="bg-dark text-white p-4 margin-overlay2">
               <div className="mb-4">
                 <h2 className="text-white">{title}</h2>
               </div>
-              <h5 className="mb-3">{subtitle}</h5>
+              <h5 className="mb-3 text-light">{subtitle}</h5>
               <p>
                 {description}
                 <br />
                 <br />
                 {additionalText}
               </p>
-              <a className="btn btn-primary mt-3" href={`tel:${contactNumber}`}>
-                {contactNumber}
-              </a>
+           
+                <LinkButton title={contactNumber} href={`tel:${contactNumber}`}/>
+
             </div>
           </div>
         </div>

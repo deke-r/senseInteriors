@@ -1,31 +1,32 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { ChevronRight, ChevronDown } from "lucide-react"
-
-
+import { useState } from "react";
+import { ChevronRight, ChevronDown } from "lucide-react";
+import { Collapse } from "react-collapse";
+import "../styles/wcus.css";
 
 export default function WhyChooseUsSection({ items }) {
-  const [activeIndex, setActiveIndex] = useState(0)
+  const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="py-5">
+    <section className="py-5 whyus-wrapper">
       <div className="container">
         <div className="row">
+          {/* Accordion */}
           <div className="col-md-6">
             <div className="mb-4">
               <h3 className="text-primary">Why Choose Us?</h3>
             </div>
             <div className="accordion" id="whyChooseUsAccordion">
               {items.map((item, index) => (
-                <div key={index} className="card mb-3 border">
-                  <div className="card-header bg-white p-0">
+                <div key={index} className="card mb-3 border whyus-card">
+                  <div className="card-header bg-white p-0 whyus-card-header">
                     <div className="d-flex">
                       <button
                         className="btn btn-link text-decoration-none text-dark w-100 text-start p-3"
-                        type="button"
-                        onClick={() => setActiveIndex(index === activeIndex ? -1 : index)}
-                        aria-expanded={index === activeIndex}
+                        onClick={() =>
+                          setActiveIndex(index === activeIndex ? -1 : index)
+                        }
                       >
                         <div className="d-flex align-items-center">
                           <div
@@ -43,46 +44,42 @@ export default function WhyChooseUsSection({ items }) {
                       </button>
                     </div>
                   </div>
-                  <div className={`collapse ${index === activeIndex ? "show" : ""}`}>
-                    <div className="card-body">
+                  <Collapse isOpened={index === activeIndex}>
+                    <div className="card-body whyus-card-body">
                       {item.content}
                       {item.listItems && (
-                        <ul className="list-unstyled mt-3">
+                        <ul className="list-unstyled mt-3 whyus-list">
                           {item.listItems.map((listItem, i) => (
                             <li key={i} className="mb-2">
-                              <ChevronRight className="h-4 w-4 text-warning inline mr-2" />
+                              <ChevronRight className="h-4 w-4 text-warning inline me-2" />
                               {listItem}
                             </li>
                           ))}
                         </ul>
                       )}
                     </div>
-                  </div>
+                  </Collapse>
                 </div>
               ))}
             </div>
           </div>
+
+          {/* Right Side Content */}
           <div className="col-md-6">
             <div className="mb-4">
               <h3 className="text-primary">Serving with Quality Over a Decade</h3>
             </div>
             <h2 className="mb-4">A Perfect Design Enhances the Beauty</h2>
             <p className="text-muted">
-              Choosing of Interior designer has played an important role in adding beauty to your room. We specialize in
-              crafting designs that meticulously organize spaces for optimal functionality. However, our team with the
-              architecture help you by organizing and structural way of your place. Choose us for our expertise in
-              creating aesthetically pleasing environments that elevate productivity and inspire creativity. Our
-              commitment to delivering attractive and comfortable atmospheres ensures a work environment that inspires
-              and supports your team's success with architectural as well as interior designs.
-              <br />
-              <br />
-              In truth, our expertise is where we carefully assess the profitability and working aspects of interior
-              projects and architecture. Our careful of documents at the outset minimizes potential legal barriers as
-              the project progresses.
+              Choosing an interior designer plays a vital role in enhancing your room’s beauty. We specialize in crafting designs that organize spaces for optimal functionality. Our team, alongside architects, helps structure your place effectively.
+              <br /><br />
+              We create aesthetically pleasing environments that elevate productivity and inspire creativity. Our commitment to delivering attractive and comfortable atmospheres ensures a work environment that supports your team's success.
+              <br /><br />
+              We also carefully assess the profitability and practical aspects of interior projects. Proper documentation at the start minimizes legal issues as the project progresses.
             </p>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,0 +1,34 @@
+.whyus-card {
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.whyus-card-header .btn {
+  font-family: 'Poppins', sans-serif;
+}
+
+.whyus-card-body {
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out, transform 0.3s ease;
+  transform: translateY(0);
+}
+
+.ReactCollapse--collapse {
+  transition: height 400ms ease;
+}
+
+.ReactCollapse--content {
+  opacity: 0;
+  transform: translateY(-5px);
+  animation: fadeInUp 0.4s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.whyus-list li {
+  font-size: 16px;
+}

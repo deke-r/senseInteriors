@@ -48,7 +48,7 @@ const Navbar = () => {
         <div className="collapse bg-md-light rounded-2 navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto me-md-5 mb-2 text-center mb-lg-0">
             <li className="nav-item"><Link href="/" className="nav-link">HOME</Link></li>
-            <li className="nav-item"><Link href="/about-us" className="nav-link">ABOUT</Link></li>
+            <li className="nav-item"><Link href="/about-sense-interiors" className="nav-link">ABOUT</Link></li>
             <li className={`nav-item dropdown ${dropdownOpen ? 'open' : ''}`} onClick={toggleDropdown}>
               <span className="nav-link dropdown-toggle" id="servicesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                 SERVICES

@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 html, body {
   font-family: system-ui, sans-serif !important;
 }
 
 
+* {
+  font-family: 'Poppins', sans-serif;
+}
 .box_sdw11 {
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 2.2px 2.2px 2.6px;
   box-shadow: rgba(0, 0, 0, 0.15) 2.2px 2.2px 2.6px;
@@ -98,6 +102,7 @@ h3 {
   font-weight: 700;
 }
 
+
 .bg-primary {
   background-color: var(--primary) !important;
 }
@@ -153,4 +158,52 @@ h3 {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--warning); 
+}
+
+
+.bg-who-we-are{
+  background-image: url('/img/bg1-home1.jpeg');
+}
+
+.bg-dark{
+  background-color: black !important;
+}
+
+
+@media (min-width:978px) {
+
+  .margin-overlay2{
+    position: absolute;
+    z-index: 2;
+    left: -10%;
+    top: 10%;
+    max-width: 580px;
+  }
+}
+
+.call-to-action{
+  background-image: url('/img/bg1-home1.jpeg');
+}
+
+.service-skill-section{
+  background-image: url('/img/bg2-home1.webp');
+}
+
+.footer-top{
+  background-image: url('/img/Map-fo-Website.webp');
+  min-height: 900px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.splide__slide {
+  transition: transform 0.3s ease;
+}
+.splide__slide:hover {
+  transform: scale(1.05);
+}
+
+.text-decoration-none{
+  text-decoration: none !important;
 }

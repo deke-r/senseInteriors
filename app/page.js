@@ -1,15 +1,15 @@
-import Navbar from "@/components/Navbar";
-import Carousel from "@/components/Carousel";
-import HeroSection from "@/components/hero-section"
-import ServicesSection from "@/components/services-section"
-import WhoWeAreSection from "@/components/who-we-are-section"
-import CallToActionSection from "@/components/call-to-action-section"
-import WhyChooseUsSection from "@/components/why-choose-us-section"
-import ServicesSkillSection from "@/components/services-skill-section"
-import BackgroundContentSection from "@/components/background-content-section"
-import ClientsSection from "@/components/Clients-section"
-import TestimonialsSection from "@/components/testimonials-section"
-import Footer from "@/components/Footer"
+import Navbar from "../components/Navbar";
+import Carousel from "../components/Carousel";
+import HeroSection from "../components/Hero-section"
+import ServicesSection from "../components/Services-section"
+import WhoWeAreSection from "../components/Who-we-are-section"
+import CallToActionSection from "../components/Call-to-action-section"
+import WhyChooseUsSection from "../components/Why-choose-us-section"
+import ServicesSkillSection from "../components/Services-skill-section"
+import BackgroundContentSection from "../components/Background-content-section"
+import ClientsSection from "../components/Clients-section"
+import TestimonialsSection from "../components/Testimonials-section"
+import Footer from "../components/Footer"
 
 import { designServices, whyChooseUs, serviceSkills, testimonials } from "@/data/content"
 
@@ -39,11 +39,11 @@ export default function Home() {
         description="Sense Interiors is an interior designing and architectural company that was established in 1998. We specialize in balancing interior design and architecture services and crafting beautiful designs for your needs. With a team of designers, we have successfully completed over 1300 projects across Pan India, offering a diverse range of balancing packages."
         additionalText="In truth, We offer a wide range of design and architectural services surrounding residential and commercial projects. Our expertise extends to apartments, homes, offices, salons, restaurants, and home interiors with architectural renovations. With this personalized consultation and turnkey solutions, we aim uniquely to create unique and aesthetic spaces that reflect your individual style and preferences."
         welcomeTitle="Welcome to India's Leading, Most Experienced Interior Designers & Architectural Firm"
-        imageSrc="/placeholder.svg?height=400&width=500"
+        imageSrc="/img/Interior-Art-Work-for-website.webp"
       />
 
       <WhoWeAreSection
-        mainImage="/placeholder.svg?height=400&width=500"
+        mainImage="/img/who-we.webp"
         infoTitle="Get Your Free consulting"
         infoLinkText="CLICK HERE!"
         infoLinkUrl="#"
@@ -79,7 +79,7 @@ export default function Home() {
 
       <ClientsSection />
 
-      <TestimonialsSection testimonials={testimonials} imageSrc="/placeholder.svg?height=400&width=500" />
+      <TestimonialsSection testimonials={testimonials} imageSrc="/img/image2-home2.webp" />
 
       <Footer />
     </main>

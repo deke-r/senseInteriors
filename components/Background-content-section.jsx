@@ -9,7 +9,7 @@ export default function BackgroundContentSection({
     <section
       className="py-5 text-white position-relative"
       style={{
-        backgroundImage: "url('/placeholder.svg?height=600&width=1200')",
+        backgroundImage: "url('/img/parallax-portfolio.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",

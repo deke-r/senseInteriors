@@ -20,7 +20,7 @@ export default function TestimonialsSection({ testimonials, imageSrc }) {
     <section
       className="py-5 text-white"
       style={{
-        backgroundImage: "url('/placeholder.svg?height=600&width=1200&text=Testimonials Background')",
+        backgroundImage: "url('/img/bg2-home5.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -32,13 +32,13 @@ export default function TestimonialsSection({ testimonials, imageSrc }) {
               <h2 className="text-white">Testimonials</h2>
             </div>
             <div className="position-relative">
-              <div className="card bg-white text-dark p-4 mb-4">
+              <div className="card  p-4 mb-4" style={{backgroundColor:'transparent'}}>
                 <div className="card-body">
-                  <p className="text-center fst-italic mb-0">{testimonials[activeIndex].content}</p>
+                  <p className="text-center fst-italic mb-0" style={{color:'#7a7a7a'}}>{testimonials[activeIndex].content}</p>
                 </div>
               </div>
               <div className="text-warning">
-                <h5>
+                <h5 className="text-warning">
                   <span>---</span> {testimonials[activeIndex].author} <span>---</span>
                 </h5>
               </div>
@@ -53,7 +53,7 @@ export default function TestimonialsSection({ testimonials, imageSrc }) {
             </div>
           </div>
           <div className="col-md-6">
-            <img src={imageSrc || "/placeholder.svg"} className="img-fluid" alt="Testimonials" />
+            <img src={imageSrc || "/img/image2-home2.webp"} className="img-fluid" alt="Testimonials" />
           </div>
         </div>
       </div>

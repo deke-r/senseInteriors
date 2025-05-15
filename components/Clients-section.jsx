@@ -1,12 +1,14 @@
 "use client"
 
-import { useRef } from "react"
+import { Splide, SplideSlide } from '@splidejs/react-splide'
+import '@splidejs/react-splide/css'
+import { useEffect, useRef } from 'react'
+
+const clientImages = Array.from({ length: 23 }, (_, i) => `/img/client-${String(i + 1).padStart(2, '0')}.webp`);
 
 export default function ClientsSection() {
   const carouselRef = useRef(null)
 
-  // This would normally be implemented with a proper carousel library
-  // For this example, we're just showing a static version
   return (
     <section className="py-5">
       <div className="container">
@@ -17,25 +19,38 @@ export default function ClientsSection() {
             </div>
           </div>
         </div>
-        <div className="row">
-          <div className="col-12">
-            <div className="client-carousel" ref={carouselRef}>
-              <div className="row">
-                {[...Array(8)].map((_, i) => (
-                  <div key={i} className="col-6 col-md-3 mb-4">
-                    <div className="border p-4 text-center">
-                      <img
-                        src={`/placeholder.svg?height=100&width=200&text=Client ${i + 1}`}
-                        className="img-fluid"
-                        alt={`Client ${i + 1}`}
-                      />
-                    </div>
-                  </div>
-                ))}
+        <Splide
+          ref={carouselRef}
+          options={{
+            type: 'loop',
+            autoplay: true,
+            interval: 2000,
+            pauseOnHover: false,
+            arrows: false,
+            pagination: false,
+            perPage: 4,
+              perMove: 1,
+            breakpoints: {
+              992: { perPage: 3 },
+              768: { perPage: 2 },
+              576: { perPage: 1 },
+            },
+            gap: '1rem',
+          }}
+        >
+          {clientImages.map((src, i) => (
+            <SplideSlide key={i}>
+              <div className="border p-4 text-center bg-white rounded shadow-sm h-100 d-flex align-items-center justify-content-center">
+                <img
+                  src={src}
+                  className="img-fluid"
+                  alt={`Client ${i + 1}`}
+                  style={{ maxHeight: '100px', objectFit: 'contain' }}
+                />
               </div>
-            </div>
-          </div>
-        </div>
+            </SplideSlide>
+          ))}
+        </Splide>
       </div>
     </section>
   )

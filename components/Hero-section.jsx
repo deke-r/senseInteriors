@@ -18,18 +18,18 @@ export default function HeroSection({
             <h2 className="mb-4">{title}</h2>
             <ul className="list-inline mb-3">
               {areas.slice(0, 5).map((area, index) => (
-                <li key={`area-1-${index}`} className="list-inline-item">
+                <li key={`area-1-${index}`} className="list-inline-item  f_12 fw-semibold">
                   {index > 0 && <span className="mx-2">|</span>}
-                  <SignOut className="h-4 w-4 inline mr-1" />
+                  <SignOut className="h-4 w-4 inline mr-1 text-b" />
                   {area}
                 </li>
               ))}
             </ul>
             <ul className="list-inline mb-4">
               {areas.slice(5).map((area, index) => (
-                <li key={`area-2-${index}`} className="list-inline-item">
+                <li key={`area-2-${index}`} className="list-inline-item f_12 fw-semibold">
                   {index > 0 && <span className="mx-2">|</span>}
-                  <SignOut className="h-4 w-4 inline mr-1" />
+                  <SignOut className="h-4 w-4 inline mr-1  text-b" />
                   {area}
                 </li>
               ))}
