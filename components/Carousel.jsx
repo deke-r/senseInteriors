@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect } from 'react';
 import '../styles/carousel.css';
 import Link from 'next/link';
 
@@ -8,24 +9,18 @@ const slides = [
     videoSrc: '/video/vid1.mp4',
     title: 'QUALITY WHICH MAKES US DIFFERENT FROM OTHERS AS ARCHITECTURAL FIRM',
     desc: 'Sense Interiors® focusing on Delhi Ncr prime residential building Architectural projects, Interiors Design, conversions and refurbishments.',
-    // buttonLabel: 'View Galleries',
-    // buttonLink: '/galleries',
     position: 'left',
   },
   {
     videoSrc: '/video/vid4.mp4',
     title: 'An Award Winning #1 Trusted Interiors Design Company',
     desc: 'Commercial & Residential Beautiful delivers stylish home inspiration and the latest interior design trends, contact Sense Projects®.',
-    // buttonLabel: 'Learn More',
-    // buttonLink: '/about',
     position: 'right',
   },
   {
     videoSrc: '/video/vid2.mp4',
     title: 'Specialist in Turnkey Solutions, High Quality Work.',
     desc: 'SenseInteriors® Our Turnkey service delivers every aspect of the project lifecycle',
-    // buttonLabel: 'View More',
-    // buttonLink: '/services',
     position: 'left',
   },
 ];
@@ -35,6 +30,17 @@ const getPositionClass = (position) => {
 };
 
 const Carousel = () => {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const nextBtn = document.querySelector('#carouselExampleDark .carousel-control-next');
+      if (nextBtn) {
+        nextBtn.click();
+      }
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="container-fluid p-0">
       <div
@@ -76,11 +82,6 @@ const Carousel = () => {
                 <p className="carousel-text-desc text-light fw-semibold">
                   {slide.desc}
                 </p>
-                {/* <Link href={slide.buttonLink} className="text-decoration-none">
-                  <div className="carousel-text-button btn rounded-pill text-light mt-3">
-                    {slide.buttonLabel}
-                  </div>
-                </Link> */}
               </div>
             </div>
           ))}

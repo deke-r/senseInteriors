@@ -20,7 +20,7 @@ export default function BackgroundContentSection({
         <div className="row">
           <div className="col-md-12 text-center">
             <div>
-              <h2 className="mb-4">
+              <h2 className="mb-4 text-light">
                 {title.split(" ").map((word, i) =>
                   i === 1 ? (
                     <span key={i} className="text-warning">

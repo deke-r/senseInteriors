@@ -5,6 +5,7 @@ import ServicesSkillSection from "@/components/Services-skill-section";
 import CallToActionSection from "@/components/Call-to-action-section";
 import PageBanner from "@/components/PageBanner";
 import Navbar from "@/components/Navbar";
+import WhyChooseUs from "@/components/WhyChooseUs";
 export default function Aboutus() {
     return (
         <>
@@ -17,7 +18,7 @@ export default function Aboutus() {
                 />
                 <Navbar />
             </div>
-
+             <WhyChooseUs/>
               <CallToActionSection
                 title="If you find a high quality Interior Design Company for your project?"
                 phoneNumber="+91 9821995637"

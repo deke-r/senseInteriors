@@ -81,7 +81,7 @@ export default function Home() {
 
       <TestimonialsSection testimonials={testimonials} imageSrc="/img/image2-home2.webp" />
 
-      <Footer />
+   
     </main>
   )
 }

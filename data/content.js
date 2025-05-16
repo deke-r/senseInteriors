@@ -1,20 +1,28 @@
+import { Building, MountainIcon as ThinkPeaks, Home, Factory,
+  Building2,
+  Coffee,
+  ShoppingBag,
+  BookOpen } from "lucide-react"
+
+
+
 export const designServices = [
     {
-      icon: "building",
+      icon: Building,
       title: "Architectural",
       description:
         "We provide consultancy which is highly responsive and it's a client oriented firm. We provide consultancy in architectural planning and our skilled & experienced architects are involved in developing a spacious zone with new ideas and requirements...",
       link: "/architectural-firms",
     },
     {
-      icon: "thinkpeaks",
+      icon: ThinkPeaks,
       title: "Interiors Design",
       description:
         "Designs are made in such a manner which makes your place very much organized & looks decent. We also know that it is easy cumulative to work in an organized manner and place to increases both the utility and creativity for an individual's room.",
       link: "/interiors-designing-services",
     },
     {
-      icon: "home",
+      icon: Home,
       title: "Consultancy Provider",
       description:
         "We are leading & top most company in providing turnkey projects with our expert team who have accomplished the target with responsibility. Our company takes the charge of the entire project being the most trusted, responsible & as the best in providing",
@@ -99,3 +107,80 @@ export const designServices = [
     },
   ]
   
+
+  export const architectServices = [
+  {
+    icon: Home,
+    title: "Residential",
+    description:
+      "Designing and building your dream home with care and creativity. Your perfect space, tailored just for you. Quality architecture, personalized.",
+    link: "/residential",
+  },
+  {
+    icon: Factory,
+    title: "Industrial",
+    description:
+      "Designing practical and efficient industrial spaces to boost productivity and safety. Customized solutions for optimal functionality and operational excellence.",
+    link: "/industrial",
+  },
+  {
+    icon: Building2,
+    title: "Commercial",
+    description:
+      "Designing attractive and functional commercial spaces to boost businesses. Custom solutions that reflect professionalism, innovation, and practicality for success.",
+    link: "/commercial",
+  },
+  {
+    icon: Coffee,
+    title: "Hospitality",
+    description:
+      "Creating inviting and efficient spaces for hospitality. Designs focused on enhancing guest experiences, combining comfort, style, and operational efficiency seamlessly.",
+    link: "/hospitality",
+  },
+  {
+    icon: ShoppingBag,
+    title: "Retail",
+    description:
+      "Crafting appealing retail spaces for a dynamic shopping experience. Designs that attract customers with a perfect blend of aesthetics and functionality.",
+    link: "/retail",
+  },
+  {
+    icon: BookOpen,
+    title: "Institutional",
+    description:
+      "Specialized designs for institutional spaces, promoting functionality and a conducive environment for learning, research, or public service. Tailored architectural solutions.",
+    link: "/institutional",
+  },
+];
+
+
+export const architectserviceSkills = [
+  {
+    icon: "addressCard",
+    title: "Noida",
+    description:
+      "Bringing architectural excellence to Noida. Customized designs for homes and spaces, reflecting creativity and precision for a unique experience.",
+    link: "architectural-firm-in-noida",
+  },
+  {
+    icon: "addressCard",
+    title: "Ghaziabad",
+    description:
+      "Designing homes and spaces in Ghaziabad uniquely. Customized solutions with a mix of creativity and precision for a special architectural experience",
+    link: "architecture-firm-in-ghaziabad",
+  },
+  {
+    icon: "refreshCw",
+    title: "Gurgaon",
+    description:
+      "Designing homes and spaces in Gurgaon with a touch of creativity and precision. Tailored solutions for a distinctive architectural experience.",
+    link: "architectural-company-in-gurgaon",
+  },
+  {
+    icon: "handshake",
+    title: "Faridabad",
+    description:
+      "Designing exceptional homes and spaces in Faridabad. Tailored solutions that blend creativity and precision for a uniquely crafted architectural experience.",
+    link: "architecture-firm-in-faridabad",
+  },
+];
