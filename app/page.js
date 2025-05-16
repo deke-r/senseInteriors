@@ -1,3 +1,46 @@
+export const metadata = {
+  title: "Best Interior Design Company in Delhi NCR - Sense Interiors Pvt Ltd.",
+  description: "Sense Interiors Pvt. Ltd. is a leading interior design company in Delhi NCR. We cover the residential, commercial, and Industrial sectors. Book a consultation now!",
+  keywords: [
+    "Interior Design Company",
+    "interior design firm",
+    "Interior Designers"
+  ],
+  robots: {
+    index: true,
+    follow: true,
+    maxSnippet: -1,
+    maxVideoPreview: -1,
+    maxImagePreview: "large"
+  },
+  alternates: {
+    canonical: "https://senseinteriors.in/",
+    types: {
+      "application/rss+xml": [
+        {
+          title: "Interior designers in Delhi, Noida, Gurgaon, office interior designer in Delhi » Feed",
+          url: "https://senseinteriors.in/feed/"
+        },
+        {
+          title: "Interior designers in Delhi, Noida, Gurgaon, office interior designer in Delhi » Comments Feed",
+          url: "https://senseinteriors.in/comments/feed/"
+        }
+      ]
+    }
+  },
+  openGraph: {
+    title: "Interiors Design Services in Delhi NCR, commercial and residential interior design in Delhi NCR",
+    description: "Best Interior Designers in Delhi NCR - Latest Interiors offers residential, Corporate Retail, Hospitality, Industrial, Institutional interior design services. Call our interior decorators in Delhi now.",
+    url: "https://senseinteriors.in/interior-design-company-in-delhi",
+    siteName: "Sense Interiors",
+    locale: "en_US",
+    type: "website"
+  }
+}
+
+
+
+
 import Navbar from "../components/Navbar";
 import Carousel from "../components/Carousel";
 import HeroSection from "../components/Hero-section"

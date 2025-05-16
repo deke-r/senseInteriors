@@ -10,7 +10,7 @@ const TawkToWidget = () => {
     script.charset = "UTF-8";
     script.setAttribute("crossorigin", "*");
 
-    // Tawk API setup
+
     window.Tawk_API = window.Tawk_API || {};
     window.Tawk_LoadStart = new Date();
 

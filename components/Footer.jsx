@@ -3,24 +3,25 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer>
-      <section className="bg-light footer-top">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12 text-center">
-              <div>
-                <h2>
-                  Presence in <span className="text-warning">Delhi NCR</span>
-                </h2>
-                <p className="text-muted">
-                  We understand your time is valuable, so we are very straightforward with our pricing. Knowing your
-                  situation will help us give you the information you need to start developing a trusting relationship from
-                  day one.
-                </p>
-              </div>
-            </div>
-          </div>
+<section className="bg-light footer-top d-flex align-items-center text-center">
+  <div className="container">
+    <div className="row justify-content-center">
+      <div className="col-md-10">
+        <div>
+          <h2 className="fw-bold display-6">
+            <span className="text-dark">Presence in</span> <span className="text-warning">Delhi NCR</span>
+          </h2>
+          <p className="text-muted mt-3">
+            We understand your time is valuable, so we are very straightforward with our pricing. Knowing your
+            situation will help us give you the information you need to start developing a trusting relationship from
+            day one.
+          </p>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       <section className="bg-dark text-white">
         <div className="container-fluid">
