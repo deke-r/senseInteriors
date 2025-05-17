@@ -42,10 +42,7 @@ export default function ALF() {
             </div>
             <InternalServiceSection {...architectServiceData} />
 
-            <CallToActionSection
-                title="If you find a high quality Architectural Firm for your project?"
-                phoneNumber="+91 9821995637"
-            />
+
 
             <ServicesSection services={architectServices} />
             <BackgroundContentSection
@@ -56,13 +53,17 @@ With a focus on designs for human use and your surroundings, we handle every asp
 
             />
 
-            
-                  <ServicesSkillSection
-                    title="Quality Which Makes us Different From others as Architectural firms"
-                    phoneNumber="+91 9319412012"
-                    skills={architectserviceSkills}
-                  />
-            
+
+            <ServicesSkillSection
+                title="Quality Which Makes us Different From others as Architectural firms"
+                phoneNumber="+91 9319412012"
+                skills={architectserviceSkills}
+            />
+            <CallToActionSection
+                title="If you find a high quality Architectural Firm for your project?"
+                phoneNumber="+91 9821995637"
+            />
+
         </>
     );
 }

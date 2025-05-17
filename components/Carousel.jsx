@@ -36,7 +36,7 @@ const Carousel = () => {
       if (nextBtn) {
         nextBtn.click();
       }
-    }, 500);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, []);

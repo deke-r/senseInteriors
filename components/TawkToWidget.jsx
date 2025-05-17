@@ -18,7 +18,7 @@ const TawkToWidget = () => {
       if (window.Tawk_API && typeof window.Tawk_API.setAttributes === "function") {
         window.Tawk_API.setAttributes(
           {
-            site: "STARGLASS",
+            site: "SENSEINTERIORS",
           },
           function (error) {
             if (error) console.error("Tawk attribute error:", error);

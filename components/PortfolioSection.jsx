@@ -154,41 +154,64 @@ export default function PortfolioPage() {
           {/* Kitchen Designs */}
           <PortfolioItem
             category="kitchen"
-            imageSrc="/placeholder.svg?height=300&width=400"
+            imageSrc="/img/beautiful-kitchen-interior-design.webp"
             altText="Kitchen Design 1"
           />
           <PortfolioItem
             category="kitchen"
-            imageSrc="/placeholder.svg?height=300&width=400"
+            imageSrc="/img/3d-rendering-modern-kitchen-counter-with-white-biege-design.webp"
             altText="Kitchen Design 2"
           />
           <PortfolioItem
             category="kitchen"
-            imageSrc="/placeholder.svg?height=300&width=400"
+            imageSrc="/img/3d-rendering-white-minimal-kitchen-with-wood-decoration.webp"
             altText="Kitchen Design 3"
           />
 
           {/* Showroom Designs */}
           <PortfolioItem
             category="showroom"
-            imageSrc="/placeholder.svg?height=300&width=400"
+            imageSrc="/img/jewelry-store-shopping-center_1112-6549.webp"
             altText="Showroom Design 1"
           />
           <PortfolioItem
             category="showroom"
-            imageSrc="/placeholder.svg?height=300&width=400"
+            imageSrc="/img/lobby-interior-realistic_1284-22531.webp"
             altText="Showroom Design 2"
+          />
+          <PortfolioItem
+            category="showroom"
+            imageSrc="/img/modern-minimalist-retail-store-interior_1310085-99358.webp"
+            altText="Showroom Design 3"
+          />
+
+
+
+          <PortfolioItem
+            category="washrooms"
+            imageSrc="/img/public-toilet_1417-1759.webp"
+            altText="Washroom Design 1"
+          />
+          <PortfolioItem
+            category="washrooms"
+            imageSrc="/img/tidy-bathroom-with-shiny-tiles_1203-1501.webp"
+            altText="Washrooms Design 2"
+          />
+          <PortfolioItem
+            category="washrooms"
+            imageSrc="/img/3d-rendering-modern-design-marble-tile-toilet-bathroom_105762-2043.webp"
+            altText="Washroom Design 3"
           />
 
           {/* Corporate Designs */}
           <PortfolioItem
             category="corporate"
-            imageSrc="/placeholder.svg?height=300&width=400"
+            imageSrc="/img/modern-office-meeting-room-designed-collaboration-productivity_1294860-28763.webp"
             altText="Corporate Design 1"
           />
           <PortfolioItem
             category="corporate"
-            imageSrc="/placeholder.svg?height=300&width=400"
+            imageSrc="/img/empty-room-with-chairs-desks_23-2149008873.webp"
             altText="Corporate Design 2"
           />
         </div>
