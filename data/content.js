@@ -2,7 +2,11 @@ import { Building, MountainIcon as ThinkPeaks, Home, Factory,
   Building2,
   Coffee,
   ShoppingBag,
-  BookOpen } from "lucide-react"
+  BookOpen,
+   PencilRuler,
+  Wallet,
+  ClipboardCheck,
+ } from "lucide-react"
 
 
 
@@ -258,5 +262,141 @@ export const architectserviceSkills = [
     description:
       "Designing exceptional homes and spaces in Faridabad. Tailored solutions that blend creativity and precision for a uniquely crafted architectural experience.",
       link: "/contact",
+  },
+];
+
+
+export const turnkeyServices = [
+  {
+    icon: Home,
+    title: "Residential",
+    description:
+      "Comprehensive turnkey solutions for your dream home—covering everything from design and planning to final execution. We ensure a hassle-free experience with unmatched quality and personalization.",
+    link: "/contact",
+  },
+  {
+    icon: Factory,
+    title: "Industrial",
+    description:
+      "End-to-end turnkey execution of industrial projects focused on functionality, compliance, and efficiency. From blueprint to build, we handle it all under one roof.",
+    link: "/contact",
+  },
+  {
+    icon: Building2,
+    title: "Commercial",
+    description:
+      "Seamless turnkey delivery of commercial spaces—from concept to completion. We focus on functionality, aesthetics, and timely delivery to support your business success.",
+    link: "/contact",
+  },
+  {
+    icon: Coffee,
+    title: "Hospitality",
+    description:
+      "Turnkey execution for hospitality environments, ensuring style, comfort, and smooth project management. We create spaces that elevate guest experiences while optimizing operations.",
+    link: "/contact",
+  },
+  {
+    icon: ShoppingBag,
+    title: "Retail",
+    description:
+      "From initial design to final handover, our turnkey solutions for retail spaces combine brand identity, functionality, and aesthetic appeal to maximize customer engagement.",
+    link: "/contact",
+  },
+  {
+    icon: BookOpen,
+    title: "Institutional",
+    description:
+      "Delivering institutional projects through turnkey solutions that prioritize utility, safety, and long-term durability. We manage everything to keep your vision and timelines intact.",
+    link: "/contact",
+  },
+];
+
+
+
+export const turnkeyserviceSkills = [
+  {
+    icon: "addressCard",
+    title: "Noida",
+    description:
+      "If you are looking for a home improvement service, get in touch with us to discuss your requirements. We are the best interior design company in Noida, offering turnkey architectural solutions.",
+    link: "/contact",
+  },
+  {
+    icon: "addressCard",
+    title: "Ghaziabad",
+    description:
+      "If you are looking for a home improvement service, get in touch with us to discuss your requirements. We are the best interior design company in Ghaziabad, providing complete turnkey solutions.",
+    link: "/contact",
+  },
+  {
+    icon: "refreshCw",
+    title: "Gurgaon",
+    description:
+      "We work closely with our clients at every stage of the development process to deliver excellence. Recognized as the best interior design company in Gurgaon with complete turnkey solutions.",
+    link: "/contact",
+  },
+  {
+    icon: "handshake",
+    title: "Faridabad",
+    description:
+      "We understand the importance of a personal touch, which is why we assign a dedicated project manager for perfect coordination. Experience turnkey solutions from the best interior design company in Faridabad.",
+    link: "/contact",
+  },
+];
+
+
+export const consultancyServices = [
+  {
+    icon: PencilRuler,
+    title: "Design Consultancy",
+    description:
+      "Sense Interiors Pvt. Ltd. is your one-stop solution for design consultation. We've shaped some of the most iconic projects nationwide—our work is our identity and endorsement.",
+    link: "/contact",
+  },
+  {
+    icon: Wallet,
+    title: "Cost Consultancy",
+    description:
+      "With decades of experience since 1998, we ensure effective cost management—one of the most critical aspects of delivering successful turnkey projects for our clients.",
+    link: "/contact",
+  },
+  {
+    icon: ClipboardCheck,
+    title: "Project Management",
+    description:
+      "We bring structure and clarity to every project. Our project management blends modern techniques with expert coordination of human and material resources for seamless execution.",
+    link: "/contact",
+  },
+];
+
+
+export const consultancyserviceSkills = [
+  {
+    icon: "addressCard",
+    title: "Noida",
+    description:
+      "If you are looking for a home improvement service, get in touch with us to discuss your requirements Best Interior Design Company Noida",
+    link: "/contact",
+  },
+  {
+    icon: "addressCard",
+    title: "Ghaziabad",
+    description:
+      "If you are looking for a home improvement service, get in touch with us to discuss your requirements Best Interior Design Company Ghaziabad",
+    link: "/contact",
+  },
+  {
+    icon: "refreshCw",
+    title: "Gurgaon",
+    description:
+      "We work closely with our clients at every stage of the development process Best Interior Design Company in Gurgaon",
+    link: "/contact",
+  },
+  {
+    icon: "handshake",
+    title: "Faridabad",
+    description:
+      "We understand the importance of a personal touch that why we provide a dedicated project manager for better coordination and with getting you’re done with perfection.",
+    link: "/contact",
   },
 ];

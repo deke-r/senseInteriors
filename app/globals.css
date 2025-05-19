@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-html, body {
+
+html,
+body {
   font-family: system-ui, sans-serif !important;
 }
 
@@ -7,63 +9,193 @@ html, body {
 * {
   font-family: 'Poppins', sans-serif;
 }
+
 .box_sdw11 {
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 2.2px 2.2px 2.6px;
   box-shadow: rgba(0, 0, 0, 0.15) 2.2px 2.2px 2.6px;
 }
-.f_8  { font-size: clamp(6px, 0.5vw, 8px); }
-.f_9  { font-size: clamp(7px, 0.6vw, 9px); }
-.f_10 { font-size: clamp(8px, 0.7vw, 10px); }
-.f_11 { font-size: clamp(9px, 0.75vw, 11px); }
-.f_12 { font-size: clamp(10px, 0.8vw, 12px); }
-.f_13 { font-size: clamp(11px, 0.85vw, 13px); }
-.f_14 { font-size: clamp(12px, 0.9vw, 14px); }
-.f_15 { font-size: clamp(13px, 1vw, 15px); }
-.f_16 { font-size: clamp(14px, 1.05vw, 16px); }
-.f_17 { font-size: clamp(15px, 1.1vw, 17px); }
-.f_18 { font-size: clamp(16px, 1.15vw, 18px); }
-.f_19 { font-size: clamp(17px, 1.2vw, 19px); }
-.f_20 { font-size: clamp(18px, 1.25vw, 20px); }
-.f_21 { font-size: clamp(19px, 1.3vw, 21px); }
-.f_22 { font-size: clamp(20px, 1.35vw, 22px); }
-.f_23 { font-size: clamp(21px, 1.4vw, 23px); }
-.f_24 { font-size: clamp(22px, 1.45vw, 24px); }
-.f_25 { font-size: clamp(23px, 1.5vw, 25px); }
-.f_26 { font-size: clamp(24px, 1.55vw, 26px); }
-.f_27 { font-size: clamp(25px, 1.6vw, 27px); }
-.f_28 { font-size: clamp(26px, 1.65vw, 28px); }
-.f_29 { font-size: clamp(27px, 1.7vw, 29px); }
-.f_30 { font-size: clamp(28px, 1.75vw, 30px); }
-.f_31 { font-size: clamp(29px, 1.8vw, 31px); }
-.f_32 { font-size: clamp(30px, 1.85vw, 32px); }
-.f_33 { font-size: clamp(31px, 1.9vw, 33px); }
-.f_34 { font-size: clamp(32px, 1.95vw, 34px); }
-.f_35 { font-size: clamp(33px, 2vw, 35px); }
-.f_36 { font-size: clamp(34px, 2.1vw, 36px); }
-.f_37 { font-size: clamp(35px, 2.2vw, 37px); }
-.f_38 { font-size: clamp(36px, 2.3vw, 38px); }
-.f_39 { font-size: clamp(37px, 2.4vw, 39px); }
-.f_40 { font-size: clamp(38px, 2.5vw, 40px); }
-.f_41 { font-size: clamp(39px, 2.6vw, 41px); }
-.f_42 { font-size: clamp(40px, 2.7vw, 42px); }
-.f_43 { font-size: clamp(41px, 2.8vw, 43px); }
-.f_44 { font-size: clamp(42px, 2.9vw, 44px); }
-.f_45 { font-size: clamp(43px, 3vw, 45px); }
-.f_46 { font-size: clamp(44px, 3.1vw, 46px); }
-.f_47 { font-size: clamp(45px, 3.2vw, 47px); }
-.f_48 { font-size: clamp(46px, 3.3vw, 48px); }
-.f_49 { font-size: clamp(47px, 3.4vw, 49px); }
-.f_50 { font-size: clamp(48px, 3.5vw, 50px); }
+
+.f_8 {
+  font-size: clamp(6px, 0.5vw, 8px);
+}
+
+.f_9 {
+  font-size: clamp(7px, 0.6vw, 9px);
+}
+
+.f_10 {
+  font-size: clamp(8px, 0.7vw, 10px);
+}
+
+.f_11 {
+  font-size: clamp(9px, 0.75vw, 11px);
+}
+
+.f_12 {
+  font-size: clamp(10px, 0.8vw, 12px);
+}
+
+.f_13 {
+  font-size: clamp(11px, 0.85vw, 13px);
+}
+
+.f_14 {
+  font-size: clamp(12px, 0.9vw, 14px);
+}
+
+.f_15 {
+  font-size: clamp(13px, 1vw, 15px);
+}
+
+.f_16 {
+  font-size: clamp(14px, 1.05vw, 16px);
+}
+
+.f_17 {
+  font-size: clamp(15px, 1.1vw, 17px);
+}
+
+.f_18 {
+  font-size: clamp(16px, 1.15vw, 18px);
+}
+
+.f_19 {
+  font-size: clamp(17px, 1.2vw, 19px);
+}
+
+.f_20 {
+  font-size: clamp(18px, 1.25vw, 20px);
+}
+
+.f_21 {
+  font-size: clamp(19px, 1.3vw, 21px);
+}
+
+.f_22 {
+  font-size: clamp(20px, 1.35vw, 22px);
+}
+
+.f_23 {
+  font-size: clamp(21px, 1.4vw, 23px);
+}
+
+.f_24 {
+  font-size: clamp(22px, 1.45vw, 24px);
+}
+
+.f_25 {
+  font-size: clamp(23px, 1.5vw, 25px);
+}
+
+.f_26 {
+  font-size: clamp(24px, 1.55vw, 26px);
+}
+
+.f_27 {
+  font-size: clamp(25px, 1.6vw, 27px);
+}
+
+.f_28 {
+  font-size: clamp(26px, 1.65vw, 28px);
+}
+
+.f_29 {
+  font-size: clamp(27px, 1.7vw, 29px);
+}
+
+.f_30 {
+  font-size: clamp(28px, 1.75vw, 30px);
+}
+
+.f_31 {
+  font-size: clamp(29px, 1.8vw, 31px);
+}
+
+.f_32 {
+  font-size: clamp(30px, 1.85vw, 32px);
+}
+
+.f_33 {
+  font-size: clamp(31px, 1.9vw, 33px);
+}
+
+.f_34 {
+  font-size: clamp(32px, 1.95vw, 34px);
+}
+
+.f_35 {
+  font-size: clamp(33px, 2vw, 35px);
+}
+
+.f_36 {
+  font-size: clamp(34px, 2.1vw, 36px);
+}
+
+.f_37 {
+  font-size: clamp(35px, 2.2vw, 37px);
+}
+
+.f_38 {
+  font-size: clamp(36px, 2.3vw, 38px);
+}
+
+.f_39 {
+  font-size: clamp(37px, 2.4vw, 39px);
+}
+
+.f_40 {
+  font-size: clamp(38px, 2.5vw, 40px);
+}
+
+.f_41 {
+  font-size: clamp(39px, 2.6vw, 41px);
+}
+
+.f_42 {
+  font-size: clamp(40px, 2.7vw, 42px);
+}
+
+.f_43 {
+  font-size: clamp(41px, 2.8vw, 43px);
+}
+
+.f_44 {
+  font-size: clamp(42px, 2.9vw, 44px);
+}
+
+.f_45 {
+  font-size: clamp(43px, 3vw, 45px);
+}
+
+.f_46 {
+  font-size: clamp(44px, 3.1vw, 46px);
+}
+
+.f_47 {
+  font-size: clamp(45px, 3.2vw, 47px);
+}
+
+.f_48 {
+  font-size: clamp(46px, 3.3vw, 48px);
+}
+
+.f_49 {
+  font-size: clamp(47px, 3.4vw, 49px);
+}
+
+.f_50 {
+  font-size: clamp(48px, 3.5vw, 50px);
+}
 
 
-:root{
+:root {
   /* --primary:#14BFC7; */
   --primary: #10566f;
   --warning: #fdc500;
   --dark: #0a0a0a;
 }
 
-.text-b{
+.text-b {
   color: var(--primary) !important;
 }
 
@@ -74,9 +206,12 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* 50% black overlay */
-  z-index: 1; /* Keep the overlay behind the text */
+  background: rgba(0, 0, 0, 0.5);
+  /* 50% black overlay */
+  z-index: 1;
+  /* Keep the overlay behind the text */
 }
+
 .banner-top {
   height: 100vh;
   width: 100%;
@@ -116,7 +251,7 @@ h3 {
   border-color: var(--primary) !important;
 }
 
-.bg-primary{
+.bg-primary {
   background-color: var(--primary) !important;
 }
 
@@ -145,11 +280,11 @@ h3 {
 }
 
 ::-webkit-scrollbar-track {
-  background: #fff; 
+  background: #fff;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--primary); 
+  background-color: var(--primary);
   border-radius: 0px;
   border: 2px solid transparent;
   background-clip: content-box;
@@ -157,22 +292,22 @@ h3 {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--warning); 
+  background-color: var(--warning);
 }
 
 
-.bg-who-we-are{
+.bg-who-we-are {
   background-image: url('/img/bg1-home1.jpeg');
 }
 
-.bg-dark{
+.bg-dark {
   background-color: black !important;
 }
 
 
 @media (min-width:978px) {
 
-  .margin-overlay2{
+  .margin-overlay2 {
     position: absolute;
     z-index: 2;
     left: -10%;
@@ -181,15 +316,15 @@ h3 {
   }
 }
 
-.call-to-action{
+.call-to-action {
   background-image: url('/img/bg1-home1.jpeg');
 }
 
-.service-skill-section{
+.service-skill-section {
   background-image: url('/img/bg2-home1.webp');
 }
 
-.footer-top{
+.footer-top {
   background-image: url('/img/Map-fo-Website.webp');
   min-height: 900px;
   background-position: center;
@@ -200,10 +335,103 @@ h3 {
 .splide__slide {
   transition: transform 0.3s ease;
 }
+
 .splide__slide:hover {
   transform: scale(1.05);
 }
 
-.text-decoration-none{
+.text-decoration-none {
   text-decoration: none !important;
+}
+
+.leaf {
+  -moz-border-radius: 100px 0px;
+  -webkit-border-radius: 100px 0px;
+  border-radius: 100px 0px;
+}
+
+.bg-career {
+  background-image: url('/img/bg2-home5.webp');
+}
+.hover-career-card {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  transition: background-color 0.7s ease-in-out;
+  z-index: 1;
+}
+
+.hover-career-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/img/bg2-home5.webp');
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out;
+  z-index: 0;
+}
+
+.hover-career-card:hover::before {
+  opacity: 1;
+}
+
+/* Ensure all content stays above the background */
+.hover-career-card .card-body,
+.hover-career-card .card-title,
+.hover-career-card .card-text,
+.hover-career-card .btn,
+.hover-career-card .badge,
+.hover-career-card li,
+.hover-career-card .icon-wrapper {
+  position: relative;
+  z-index: 2;
+  transition: color 0.7s ease-in-out;
+}
+
+/* Text color transition */
+.hover-career-card .card-title,
+.hover-career-card .card-text,
+.hover-career-card li {
+  color: black !important;
+}
+
+.hover-career-card:hover .card-title,
+.hover-career-card:hover .card-text,
+.hover-career-card:hover li {
+  color: white !important;
+}
+
+/* Badge fix — keep its background and make text readable */
+.hover-career-card .badge {
+  transition: background-color 0.7s ease, color 0.7s ease;
+}
+
+.hover-career-card:hover .badge {
+  filter: brightness(1.1);
+  color: #fff !important;
+}
+
+/* Icon color fix */
+.hover-career-card .icon-wrapper svg {
+  transition: color 0.7s ease;
+  color: green;
+}
+
+.hover-career-card:hover .icon-wrapper svg {
+  color: white !important;
+}
+
+/* Button fix */
+.hover-career-card .btn {
+  background-color: #007bff;
+  border: none;
+  transition: background-color 0.7s ease, color 0.7s ease;
+}
+
+.hover-career-card:hover .btn {
+  background-color: #0056b3;
+  color: #fff !important;
 }
