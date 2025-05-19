@@ -10,7 +10,7 @@ export default function ClientsSection() {
   const carouselRef = useRef(null)
 
   return (
-    <section className="py-5">
+    <section className="py-5" data-aos="fade-up">
       <div className="container">
         <div className="row mb-5">
           <div className="col-md-12 text-center">

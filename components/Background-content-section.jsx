@@ -7,7 +7,7 @@ export default function BackgroundContentSection({
 }) {
   return (
     <section
-      className="py-5 text-white position-relative"
+      className="py-5 text-white position-relative" data-aos="fade-up"
       style={{
         backgroundImage: "url('/img/parallax-portfolio.webp')",
         backgroundSize: "cover",

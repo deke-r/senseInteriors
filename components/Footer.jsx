@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer>
-<section className="bg-light footer-top d-flex align-items-center text-center">
+<section className="bg-light footer-top d-flex align-items-center text-center" data-aos="fade-up">
   <div className="container">
     <div className="row justify-content-center">
       <div className="col-md-10">
@@ -23,7 +23,7 @@ export default function Footer() {
 </section>
 
 
-      <section className="bg-dark text-white">
+      <section className="bg-dark text-white" data-aos="fade-up">
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-12 text-center mb-4">
@@ -92,7 +92,7 @@ export default function Footer() {
         </div>
       </section>
 
-      <section className="py-2 bg-dark text-white border-top border-secondary">
+      <section className="py-2 bg-dark text-white border-top border-secondary" data-aos="fade-up">
         <div className="container">
           <div className="row">
             <div className="col-md-12 text-center">

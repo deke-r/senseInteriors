@@ -37,7 +37,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`navbar navbar-expand-lg p-md-4 fixed-top ${scrolled ? 'scrolled' : 'bg-transparent'}`}>
+  <nav
+  className={`navbar navbar-expand-lg p-md-4 fixed-top ${
+    scrolled ? 'scrolled drop-down' : 'bg-transparent'
+  }`}
+>
+
       <div className="container-fluid">
         <Link href="/" className="navbar-brand d-flex align-items-start">
           <img src='/img/Sense_Interior_Logo.webp' alt="SENSE INTERIORS" width={120} />

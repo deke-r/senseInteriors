@@ -16,17 +16,17 @@ export default function ISS({
     <section className="service-section py-5 bg-dark">
       <div className="container">
         <div className="row mx-md-5">
-          <div className="col-md-6">
+          <div className="col-md-6" data-aos="fade-right">
             <div className="heading-title-2 grey-line">
               <h2>{title}</h2>
             </div>
             <div dangerouslySetInnerHTML={{ __html: mainContent }} />
           </div>
-          <div className="col-md-6 my-auto">
+          <div className="col-md-6 my-auto" data-aos="fade-left">
             <Image src={imageSrc || "/placeholder.svg"} alt={imageAlt} width={500} height={400} className="img-fluid" />
           </div>
         </div>
-        <div className="row mx-md-5 mt-4">
+        <div className="row mx-md-5 mt-4" data-aos="fade-up">
           <div className="col-md-12">
             <h3>{whoWeAreTitle}</h3>
             <div dangerouslySetInnerHTML={{ __html: whoWeAreContent }} />

@@ -27,7 +27,7 @@ export default function TestimonialsSection({ testimonials, imageSrc }) {
     >
       <div className="container">
         <div className="row">
-          <div className="col-md-6 py-5 text-center">
+          <div className="col-md-6 py-5 text-center" data-aos="fade-right">
             <div className="mb-4">
               <h2 className="text-white">Testimonials</h2>
             </div>
@@ -52,7 +52,7 @@ export default function TestimonialsSection({ testimonials, imageSrc }) {
               </div>
             </div>
           </div>
-          <div className="col-md-6">
+          <div className="col-md-6" data-aos="fade-left">
             <img src={imageSrc || "/img/image2-home2.webp"} className="img-fluid" alt="Testimonials" />
           </div>
         </div>

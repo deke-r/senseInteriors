@@ -378,7 +378,7 @@ h3 {
   opacity: 1;
 }
 
-/* Ensure all content stays above the background */
+
 .hover-career-card .card-body,
 .hover-career-card .card-title,
 .hover-career-card .card-text,
@@ -391,7 +391,7 @@ h3 {
   transition: color 0.7s ease-in-out;
 }
 
-/* Text color transition */
+
 .hover-career-card .card-title,
 .hover-career-card .card-text,
 .hover-career-card li {
@@ -404,7 +404,7 @@ h3 {
   color: white !important;
 }
 
-/* Badge fix — keep its background and make text readable */
+
 .hover-career-card .badge {
   transition: background-color 0.7s ease, color 0.7s ease;
 }
@@ -414,7 +414,7 @@ h3 {
   color: #fff !important;
 }
 
-/* Icon color fix */
+
 .hover-career-card .icon-wrapper svg {
   transition: color 0.7s ease;
   color: green;
@@ -424,7 +424,7 @@ h3 {
   color: white !important;
 }
 
-/* Button fix */
+
 .hover-career-card .btn {
   background-color: #007bff;
   border: none;
@@ -435,3 +435,4 @@ h3 {
   background-color: #0056b3;
   color: #fff !important;
 }
+

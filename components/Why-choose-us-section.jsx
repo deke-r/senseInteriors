@@ -13,7 +13,7 @@ export default function WhyChooseUsSection({ items }) {
       <div className="container">
         <div className="row">
           {/* Accordion */}
-          <div className="col-md-6">
+          <div className="col-md-6" data-aos="fade-right">
             <div className="mb-4">
               <h3 className="text-primary">Why Choose Us?</h3>
             </div>
@@ -65,7 +65,7 @@ export default function WhyChooseUsSection({ items }) {
           </div>
 
           {/* Right Side Content */}
-          <div className="col-md-6">
+          <div className="col-md-6" data-aos="fade-left">
             <div className="mb-4">
               <h3 className="text-primary">Serving with Quality Over a Decade</h3>
             </div>

@@ -23,8 +23,8 @@ export default function ServicesSkillSection({ title, phoneNumber, skills }) {
     <section className="py-5 bg-light service-skill-section">
       <div className="container">
         <div className="row">
-          <div className="col-md-4 mb-4 mb-md-0 d-flex flex-column justify-content-center">
-            <h2 className="mb-4">{title}</h2>
+          <div className="col-md-4 mb-4 mb-md-0 d-flex flex-column justify-content-center" data-aos="fade-right">
+            <h2 className="mb-4" >{title}</h2>
 
             <LinkButton title={phoneNumber} href={`tel:${phoneNumber}`}/>
           </div>
@@ -32,7 +32,7 @@ export default function ServicesSkillSection({ title, phoneNumber, skills }) {
             <div className="row">
               {skills.map((skill, index) => (
                 <div key={index} className="col-md-6 mb-4">
-                  <div className="card h-100 card-services border-0 rounded-0 text-center p-4">
+                  <div className="card h-100 card-services border-0 rounded-0 text-center p-4" data-aos="fade-left">
                     <div className="card-body">
                      <span className="csh"> {getIcon(skill.icon)} </span>  
                       <h4 className="mb-3 csh">{skill.title}</h4>

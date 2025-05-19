@@ -2,7 +2,7 @@ import Image from "next/image"
 import '../styles/WhyChooseUs.css';
 export default function WhyChooseUs() {
   return (
-    <section className="why_choose_page abt-bg py-5">
+    <section className="why_choose_page abt-bg py-5" data-aos="fade-up">
       <div className="container">
         <div className="row">
           <div className="col-md-7">

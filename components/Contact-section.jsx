@@ -51,7 +51,7 @@ export default function ContactSection() {
       <div className="container">
         <div className="row">
           {/* Contact Information */}
-          <div className="col-md-6">
+          <div className="col-md-6" data-aos="fade-right">
             <div className="heading-title-2 span-head mb-4">
               <h2>
                 Contact<span className="text-primary"> us</span>
@@ -136,7 +136,7 @@ export default function ContactSection() {
           </div>
 
           {/* Contact Form */}
-          <div className="col-md-6 mt-4 mt-md-0">
+          <div className="col-md-6 mt-4 mt-md-0" data-aos="fade-left">
             <div className="heading-title-2 span-head mb-4">
               <h2>
                 Fill the <span className="text-primary">Contact</span> Form

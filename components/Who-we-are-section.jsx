@@ -18,7 +18,7 @@ export default function WhoWeAreSection({
       <div className="container">
         <div className="row">
           <div className="col-lg-6 mb-4 mb-md-0 postion-relative">
-            <div className="margin-overlay">
+            <div className="margin-overlay" data-aos="fade-right">
               <img src={mainImage || "/placeholder.svg"} alt="Who we are" className="img-fluid  w-100" />
               <div className=" w-100 text-center p-4  text-white">
                 <h4 className="text-light f_19 text-uppercase text-center">{infoTitle}</h4>
@@ -31,7 +31,7 @@ export default function WhoWeAreSection({
             </div>
           </div>
           <div className="col-lg-6 position-relative">
-            <div className="bg-dark text-white p-4 margin-overlay2">
+            <div className="bg-dark text-white p-4 margin-overlay2" data-aos="fade-left">
               <div className="mb-4">
                 <h2 className="text-white">{title}</h2>
               </div>

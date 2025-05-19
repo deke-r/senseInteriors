@@ -25,7 +25,7 @@ export default function CareersPage() {
       <section className="bg-career text-white py-5">
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-lg-6">
+            <div className="col-lg-6" data-aos="fade-right">
               <h1 className="display-4 fw-bold text-light">Join Our Creative Team</h1>
               <p className="lead">Shape beautiful spaces with us</p>
               <p className="mb-4">
@@ -35,7 +35,7 @@ export default function CareersPage() {
                 View Openings
               </a>
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-6" data-aos="fade-left">
               <img
                 src="/img/young-couple-discussing-document-while-real-estate-agent-explaining_1048944-15328434.webp"
                 alt="Interior design team at work"
@@ -48,7 +48,7 @@ export default function CareersPage() {
 
       {/* Why Join Us Section */}
       <section className="py-5">
-        <div className="container">
+        <div className="container" data-aos="fade-up">
           <h2 className="text-center mb-5">Why Join Our Team?</h2>
           <div className="row g-4">
             <div className="col-md-4">
@@ -96,7 +96,7 @@ export default function CareersPage() {
 
       {/* Current Openings Section */}
       <section className="py-5 bg-light" id="openings">
-        <div className="container">
+        <div className="container" data-aos="fade-up">
           <h2 className="text-center mb-5">Current Openings</h2>
           <div className="row g-4">
             {[

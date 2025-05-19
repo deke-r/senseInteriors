@@ -11,7 +11,7 @@ export default function HeroSection({
   imageSrc,
 }) {
   return (
-    <section className="bg-light py-5">
+    <section className="bg-light py-5" data-aos="fade-up">
       <div className="container">
         <div className="row">
           <div className="col-md-7">
