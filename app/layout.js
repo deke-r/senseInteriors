@@ -9,7 +9,7 @@ import AOS from 'aos'
 
 import Bootstrap from '../libs/Bootstrap'
 import Footer from '../components/Footer'
-// import TawkToWidget from '@/components/TawkToWidget'
+import TawkToWidget from '@/components/TawkToWidget'
 
 export default function RootLayout({ children }) {
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="d-flex flex-column min-vh-100">
         <Bootstrap />
-        {/* <TawkToWidget /> */}
+        <TawkToWidget />
         <main className="flex-grow-1">{children}</main>
         <Footer />
       </body>
