@@ -92,7 +92,7 @@ export default function ContactSection() {
               <ul className="list-unstyled d-flex">
                 <li className="me-3">
                   <a
-                    href="https://www.facebook.com/senseprojects"
+                    href="https://www.facebook.com/senseinteriors/"
                     className="social-icon facebook"
                     aria-label="Facebook"
                   >
@@ -100,13 +100,13 @@ export default function ContactSection() {
                   </a>
                 </li>
                 <li className="me-3">
-                  <a href="https://twitter.com/sense_projects" className="social-icon twitter" aria-label="Twitter">
+                  <a href="https://twitter.com/senseinteriors/" className="social-icon twitter" aria-label="Twitter">
                     <Twitter size={20} />
                   </a>
                 </li>
                 <li className="me-3">
                   <a
-                    href="https://www.linkedin.com/company/sense-projects-pvt-ltd/"
+                    href="https://www.linkedin.com/"
                     className="social-icon linkedin"
                     aria-label="LinkedIn"
                   >
@@ -115,7 +115,7 @@ export default function ContactSection() {
                 </li>
                 <li className="me-3">
                   <a
-                    href="https://www.instagram.com/senseprojects/"
+                    href="https://www.instagram.com/senseinteriors/"
                     className="social-icon instagram"
                     aria-label="Instagram"
                   >
@@ -124,7 +124,7 @@ export default function ContactSection() {
                 </li>
                 <li>
                   <a
-                    href="https://in.pinterest.com/senseprojects1/"
+                    href="https://in.pinterest.com/senseinteriors/"
                     className="social-icon pinterest"
                     aria-label="Pinterest"
                   >
@@ -142,118 +142,118 @@ export default function ContactSection() {
                 Fill the <span className="text-primary">Contact</span> Form
               </h2>
             </div>
-         {submitted ? (
-        <div className="alert alert-success" role="alert">
-          <h4 className="alert-heading">Thank you for contacting us!</h4>
-          <p>Your message has been successfully sent. We will get back to you shortly.</p>
-          <hr />
-          <button className="btn btn-success" onClick={() => setSubmitted(false)}>
-            Send Another Message
-          </button>
-        </div>
-      ) : (
-        <form onSubmit={handleSubmit(onSubmit)} noValidate>
-          <div className="mb-3">
-            <label htmlFor="name" className="form-label card-text">
-              Full Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              placeholder="Enter your name"
-              className={`form-control py-2 ${errors.name ? "is-invalid" : ""}`}
-              {...register("name", { required: "Full name is required" })}
-            />
-            {errors.name && <div className="invalid-feedback">{errors.name.message}</div>}
-          </div>
+            {submitted ? (
+              <div className="alert alert-success" role="alert">
+                <h4 className="alert-heading">Thank you for contacting us!</h4>
+                <p>Your message has been successfully sent. We will get back to you shortly.</p>
+                <hr />
+                <button className="btn btn-success" onClick={() => setSubmitted(false)}>
+                  Send Another Message
+                </button>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit(onSubmit)} noValidate>
+                <div className="mb-3">
+                  <label htmlFor="name" className="form-label card-text">
+                    Full Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                    className={`form-control py-2 ${errors.name ? "is-invalid" : ""}`}
+                    {...register("name", { required: "Full name is required" })}
+                  />
+                  {errors.name && <div className="invalid-feedback">{errors.name.message}</div>}
+                </div>
 
-          <div className="mb-3">
-            <label htmlFor="email" className="form-label card-text">
-              Email Address
-            </label>
-            <input
-              type="email"
-              id="email"
-              placeholder="Enter your email"
-              className={`form-control py-2 ${errors.email ? "is-invalid" : ""}`}
-              {...register("email", {
-                required: "Email is required",
-                pattern: {
-                  value: /^\S+@\S+$/i,
-                  message: "Invalid email address",
-                },
-              })}
-            />
-            {errors.email && <div className="invalid-feedback">{errors.email.message}</div>}
-          </div>
+                <div className="mb-3">
+                  <label htmlFor="email" className="form-label card-text">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    className={`form-control py-2 ${errors.email ? "is-invalid" : ""}`}
+                    {...register("email", {
+                      required: "Email is required",
+                      pattern: {
+                        value: /^\S+@\S+$/i,
+                        message: "Invalid email address",
+                      },
+                    })}
+                  />
+                  {errors.email && <div className="invalid-feedback">{errors.email.message}</div>}
+                </div>
 
-          <div className="mb-3">
-  <label htmlFor="phone" className="form-label card-text">
-    Phone Number
-  </label>
-  <input
-    type="tel"
-    id="phone"
-    placeholder="Enter your phone number"
-    className={`form-control py-2 ${errors.phone ? "is-invalid" : ""}`}
-    {...register("phone", {
-      required: "Phone number is required",
-      pattern: {
-        value: /^[6-9]\d{9}$/,
-        message: "Enter a valid Indian mobile number",
-      },
-    })}
-  />
-  {errors.phone && <div className="invalid-feedback">{errors.phone.message}</div>}
-</div>
+                <div className="mb-3">
+                  <label htmlFor="phone" className="form-label card-text">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Enter your phone number"
+                    className={`form-control py-2 ${errors.phone ? "is-invalid" : ""}`}
+                    {...register("phone", {
+                      required: "Phone number is required",
+                      pattern: {
+                        value: /^[6-9]\d{9}$/,
+                        message: "Enter a valid Indian mobile number",
+                      },
+                    })}
+                  />
+                  {errors.phone && <div className="invalid-feedback">{errors.phone.message}</div>}
+                </div>
 
 
-          <div className="mb-3">
-            <label htmlFor="subject" className="form-label card-text">
-              Subject
-            </label>
-            <input
-              type="text"
-              id="subject"
-              placeholder="Subject of your message"
-              className={`form-control py-2 ${errors.subject ? "is-invalid" : ""}`}
-              {...register("subject", { required: "Subject is required" })}
-            />
-            {errors.subject && <div className="invalid-feedback">{errors.subject.message}</div>}
-          </div>
+                <div className="mb-3">
+                  <label htmlFor="subject" className="form-label card-text">
+                    Subject
+                  </label>
+                  <input
+                    type="text"
+                    id="subject"
+                    placeholder="Subject of your message"
+                    className={`form-control py-2 ${errors.subject ? "is-invalid" : ""}`}
+                    {...register("subject", { required: "Subject is required" })}
+                  />
+                  {errors.subject && <div className="invalid-feedback">{errors.subject.message}</div>}
+                </div>
 
-          <div className="mb-4">
-            <label htmlFor="message" className="form-label card-text">
-              Message
-            </label>
-            <textarea
-              id="message"
-              rows={5}
-              placeholder="Type your message here"
-              className={`form-control py-2 ${errors.message ? "is-invalid" : ""}`}
-              {...register("message", { required: "Message is required" })}
-            ></textarea>
-            {errors.message && <div className="invalid-feedback">{errors.message.message}</div>}
-          </div>
+                <div className="mb-4">
+                  <label htmlFor="message" className="form-label card-text">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    rows={5}
+                    placeholder="Type your message here"
+                    className={`form-control py-2 ${errors.message ? "is-invalid" : ""}`}
+                    {...register("message", { required: "Message is required" })}
+                  ></textarea>
+                  {errors.message && <div className="invalid-feedback">{errors.message.message}</div>}
+                </div>
 
-          <div className="d-grid">
-            <button
-              type="submit"
-              className="btn btn-primary text-light fw-semibold btn-lg"
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? (
-                <>
-                  <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
-                  Sending...
-                </>
-              ) : (
-                "Send Message"
-              )}
-            </button>
-          </div>
-        </form>
-      )}
+                <div className="d-grid">
+                  <button
+                    type="submit"
+                    className="btn btn-primary text-light fw-semibold btn-lg"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                        Sending...
+                      </>
+                    ) : (
+                      "Send Message"
+                    )}
+                  </button>
+                </div>
+              </form>
+            )}
 
           </div>
         </div>
