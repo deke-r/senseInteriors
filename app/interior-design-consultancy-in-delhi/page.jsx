@@ -1,3 +1,58 @@
+export const metadata = {
+  title: "Interior Design Consultant in Delhi | Sense Interiors",
+  description:
+    "Sense Interiors is a highly reputed interior design consultant in Delhi, specializing in residential, commercial, and industrial sectors. Call us at +91-9821995637.",
+  keywords: [
+    "interior design consultant Delhi",
+    "residential interior designer Delhi",
+    "commercial interior design Delhi",
+    "office interior designer Gurgaon",
+    "industrial interior design Delhi",
+    "home interior design Noida",
+    "modern interiors Delhi",
+    "interior consultancy India",
+    "best interior designer Delhi NCR",
+    "custom interior design solutions",
+    "professional interior decorators Delhi"
+  ],
+  metadataBase: new URL("https://senseinteriors.in"),
+  alternates: {
+    canonical: "/interior-design-consultancy-in-delhi",
+    types: {
+      "application/rss+xml": [
+        {
+          title: "Interior designers in Delhi, Noida, Gurgaon, office interior designer in Delhi » Feed",
+          url: "https://senseinteriors.in/feed/",
+        },
+        {
+          title: "Interior designers in Delhi, Noida, Gurgaon, office interior designer in Delhi » Comments Feed",
+          url: "https://senseinteriors.in/comments/feed/",
+        },
+      ],
+    },
+  },
+  openGraph: {
+    title: "Interior Design Consultant in Delhi - Sense Interiors",
+    description:
+      "Sense Interiors is a leading interior design consultant in Delhi, offering expert residential, commercial, and industrial interior design services.",
+    url: "https://senseinteriors.in/interior-design-consultancy-in-delhi",
+    siteName: "Sense Interiors",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    maxSnippet: -1,
+    maxVideoPreview: -1,
+    maxImagePreview: "large",
+  },
+};
+
+
+
+
+
+
 import Navbar from "@/components/Navbar";
 import PageBanner from "@/components/PageBanner";
 import InternalServiceSection from '../../components/InternalServiceSection';

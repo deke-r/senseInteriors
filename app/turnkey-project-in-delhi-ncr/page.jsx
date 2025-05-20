@@ -1,3 +1,58 @@
+export const metadata = {
+  title: "Turnkey Interior Contractor in Delhi | Sense Interiors",
+  description:
+    "Sense Interiors is the leading turnkey interior contractor in Delhi. We specialize in residential, commercial, and industrial sectors. Call us at +91-9821995637.",
+  keywords: [
+    "Turnkey Interior Contractor",
+    "Turnkey Interior projects",
+    "Turnkey solutions in Delhi NCR",
+    "Interior design and build",
+    "Residential turnkey interiors",
+    "Commercial turnkey contractors",
+    "Industrial turnkey projects",
+    "Best turnkey interior company in Delhi",
+    "Design and build contractors Delhi",
+    "Full-service interior contractors",
+    "Top turnkey interior firm NCR"
+  ],
+  metadataBase: new URL("https://senseinteriors.in"),
+  alternates: {
+    canonical: "/turnkey-project-in-delhi-ncr",
+    types: {
+      "application/rss+xml": [
+        {
+          title: "Interior designers in Delhi, Noida, Gurgaon, office interior designer in Delhi » Feed",
+          url: "https://senseinteriors.in/feed/",
+        },
+        {
+          title: "Interior designers in Delhi, Noida, Gurgaon, office interior designer in Delhi » Comments Feed",
+          url: "https://senseinteriors.in/comments/feed/",
+        },
+      ],
+    },
+  },
+  openGraph: {
+    title:
+      "Turnkey Projects Provider in Delhi NCR | Top Turnkey Solutions Pan India - Sense Interiors",
+    description:
+      "Sense Interiors is the leading and best turnkey solutions provider company in Delhi NCR and Pan India. Specializing in complete interior execution for all sectors.",
+    url: "https://senseinteriors.in/turnkey-project-in-delhi-ncr",
+    siteName: "Sense Interiors",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    maxSnippet: -1,
+    maxVideoPreview: -1,
+    maxImagePreview: "large",
+  },
+};
+
+
+
+
+
 import Navbar from "@/components/Navbar";
 import PageBanner from "@/components/PageBanner";
 import InternalServiceSection from '../../components/InternalServiceSection';

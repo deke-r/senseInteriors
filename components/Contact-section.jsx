@@ -1,6 +1,8 @@
 "use client"
 
 import { useState } from "react"
+import { useForm } from "react-hook-form"
+import axios from "axios"
 import '../styles/contact.css';
 import {
   MapPin,
@@ -16,31 +18,29 @@ import {
 
 
 export default function ContactSection() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
-  })
+  const [submitted, setSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [formStatus, setFormStatus] = useState({ message: "", type: null })
 
-  const handleChange = (e) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm()
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
+  const onSubmit = async (data) => {
     setIsSubmitting(true)
-
     try {
-      const result = await submitContactForm(formData)
-      setFormStatus({ message: "Thank you for your message! We'll get back to you soon.", type: "success" })
-      setFormData({ name: "", email: "", phone: "", subject: "", message: "" })
+      const response = await axios.post("/api/contact-form", data)
+      if (response.data.success) {
+        setSubmitted(true)
+        reset()
+      } else {
+        alert("Something went wrong. Please try again later.")
+      }
     } catch (error) {
-      setFormStatus({ message: "There was an error submitting your form. Please try again.", type: "error" })
+      console.error("Submission failed:", error)
+      alert("Something went wrong. Please try again later.")
     } finally {
       setIsSubmitting(false)
     }
@@ -142,80 +142,119 @@ export default function ContactSection() {
                 Fill the <span className="text-primary">Contact</span> Form
               </h2>
             </div>
-            <div className="form-section">
-              <form className="form-box" onSubmit={handleSubmit}>
-                <div className="mb-3">
-                  <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    className="form-control"
-                    placeholder="Your Name"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                  />
-                </div>
-                <div className="mb-3">
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    className="form-control"
-                    placeholder="Your Email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                  />
-                </div>
-                <div className="mb-3">
-                  <input
-                    type="text"
-                    name="phone"
-                    className="form-control"
-                    placeholder="Mobile Number"
-                    id="phone"
-                    required
-                    value={formData.phone}
-                    onChange={handleChange}
-                  />
-                </div>
-                <div className="mb-3">
-                  <input
-                    type="text"
-                    name="subject"
-                    className="form-control"
-                    placeholder="Subject"
-                    id="subject"
-                    required
-                    value={formData.subject}
-                    onChange={handleChange}
-                  />
-                </div>
-                <div className="mb-3">
-                  <textarea
-                    className="form-control"
-                    rows={6}
-                    placeholder="Write Message"
-                    id="message"
-                    name="message"
-                    required
-                    value={formData.message}
-                    onChange={handleChange}
-                  ></textarea>
-                </div>
+         {submitted ? (
+        <div className="alert alert-success" role="alert">
+          <h4 className="alert-heading">Thank you for contacting us!</h4>
+          <p>Your message has been successfully sent. We will get back to you shortly.</p>
+          <hr />
+          <button className="btn btn-success" onClick={() => setSubmitted(false)}>
+            Send Another Message
+          </button>
+        </div>
+      ) : (
+        <form onSubmit={handleSubmit(onSubmit)} noValidate>
+          <div className="mb-3">
+            <label htmlFor="name" className="form-label card-text">
+              Full Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your name"
+              className={`form-control py-2 ${errors.name ? "is-invalid" : ""}`}
+              {...register("name", { required: "Full name is required" })}
+            />
+            {errors.name && <div className="invalid-feedback">{errors.name.message}</div>}
+          </div>
 
-                {formStatus.message && (
-                  <div className={`alert ${formStatus.type === "success" ? "alert-success" : "alert-danger"} mb-3`}>
-                    {formStatus.message}
-                  </div>
-                )}
+          <div className="mb-3">
+            <label htmlFor="email" className="form-label card-text">
+              Email Address
+            </label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              className={`form-control py-2 ${errors.email ? "is-invalid" : ""}`}
+              {...register("email", {
+                required: "Email is required",
+                pattern: {
+                  value: /^\S+@\S+$/i,
+                  message: "Invalid email address",
+                },
+              })}
+            />
+            {errors.email && <div className="invalid-feedback">{errors.email.message}</div>}
+          </div>
 
-                <button className="btn btn-primary" type="submit" disabled={isSubmitting}>
-                  {isSubmitting ? "Sending..." : "Send Message"}
-                </button>
-              </form>
-            </div>
+          <div className="mb-3">
+  <label htmlFor="phone" className="form-label card-text">
+    Phone Number
+  </label>
+  <input
+    type="tel"
+    id="phone"
+    placeholder="Enter your phone number"
+    className={`form-control py-2 ${errors.phone ? "is-invalid" : ""}`}
+    {...register("phone", {
+      required: "Phone number is required",
+      pattern: {
+        value: /^[6-9]\d{9}$/,
+        message: "Enter a valid Indian mobile number",
+      },
+    })}
+  />
+  {errors.phone && <div className="invalid-feedback">{errors.phone.message}</div>}
+</div>
+
+
+          <div className="mb-3">
+            <label htmlFor="subject" className="form-label card-text">
+              Subject
+            </label>
+            <input
+              type="text"
+              id="subject"
+              placeholder="Subject of your message"
+              className={`form-control py-2 ${errors.subject ? "is-invalid" : ""}`}
+              {...register("subject", { required: "Subject is required" })}
+            />
+            {errors.subject && <div className="invalid-feedback">{errors.subject.message}</div>}
+          </div>
+
+          <div className="mb-4">
+            <label htmlFor="message" className="form-label card-text">
+              Message
+            </label>
+            <textarea
+              id="message"
+              rows={5}
+              placeholder="Type your message here"
+              className={`form-control py-2 ${errors.message ? "is-invalid" : ""}`}
+              {...register("message", { required: "Message is required" })}
+            ></textarea>
+            {errors.message && <div className="invalid-feedback">{errors.message.message}</div>}
+          </div>
+
+          <div className="d-grid">
+            <button
+              type="submit"
+              className="btn btn-primary text-light fw-semibold btn-lg"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? (
+                <>
+                  <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                  Sending...
+                </>
+              ) : (
+                "Send Message"
+              )}
+            </button>
+          </div>
+        </form>
+      )}
+
           </div>
         </div>
       </div>

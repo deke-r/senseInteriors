@@ -1,3 +1,56 @@
+export const metadata = {
+  title: "About | Sense Interiors",
+  description: "Learn about Sense Interiors – top-rated interior design firm in Delhi, Noida, and Gurgaon, specializing in turnkey office and home interiors.",
+  keywords: [
+    "About Sense Interiors",
+    "Interior Designers in Delhi",
+    "Top Architecture Firms in NCR",
+    "Office Interior Design",
+    "Turnkey Projects",
+    "Gurgaon Interior Designers",
+    "Noida Interior Consultancy"
+  ],
+  metadataBase: new URL("https://senseinteriors.in"),
+  alternates: {
+    canonical: "/about",
+    types: {
+      "application/rss+xml": [
+        {
+          title:
+            "Interior designers in Delhi, Noida, Gurgaon, office interior designer in Delhi » Feed",
+          url: "https://senseinteriors.in/feed/",
+        },
+        {
+          title:
+            "Interior designers in Delhi, Noida, Gurgaon, office interior designer in Delhi » Comments Feed",
+          url: "https://senseinteriors.in/comments/feed/",
+        },
+      ],
+    },
+  },
+  openGraph: {
+    title: "About | Sense Interiors",
+    description:
+      "Explore the journey and philosophy behind Sense Interiors – leaders in interior design and architecture for Delhi NCR.",
+    url: "https://senseinteriors.in/about",
+    siteName: "Sense Interiors",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    maxSnippet: -1,
+    maxVideoPreview: -1,
+    maxImagePreview: "large",
+  },
+};
+
+
+
+
+
+
+
 import ClientsSection from "@/components/Clients-section";
 import TestimonialsSection from "../../components/Testimonials-section";
 import { designServices, whyChooseUs, serviceSkills, testimonials } from "@/data/content"

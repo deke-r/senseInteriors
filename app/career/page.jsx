@@ -1,3 +1,56 @@
+export const metadata = {
+  title: "Careers at Sense Interiors | Join Our Interior Design Team",
+  description:
+    "Explore career opportunities at Sense Interiors, a leading interior design consultancy in Delhi NCR. Join our team and build your future in residential, commercial, and industrial interior design.",
+  keywords: [
+    "interior design careers Delhi",
+    "interior designer jobs Delhi NCR",
+    "career opportunities interior design",
+    "join Sense Interiors team",
+    "interior design internships Delhi",
+    "residential interior designer jobs",
+    "commercial interior designer careers",
+    "industrial interior design jobs",
+    "interior design consultancy jobs",
+    "best interior design company to work for",
+    "Sense Interiors recruitment"
+  ],
+  metadataBase: new URL("https://senseinteriors.in"),
+  alternates: {
+    canonical: "/career",
+    types: {
+      "application/rss+xml": [
+        {
+          title: "Sense Interiors Career Updates » Feed",
+          url: "https://senseinteriors.in/feed/",
+        },
+        {
+          title: "Sense Interiors Career Comments » Comments Feed",
+          url: "https://senseinteriors.in/comments/feed/",
+        },
+      ],
+    },
+  },
+  openGraph: {
+    title: "Careers at Sense Interiors | Join Our Interior Design Team",
+    description:
+      "Join Sense Interiors and advance your career in interior design. We offer exciting job openings in residential, commercial, and industrial design projects across Delhi NCR.",
+    url: "https://senseinteriors.in/career",
+    siteName: "Sense Interiors",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    maxSnippet: -1,
+    maxVideoPreview: -1,
+    maxImagePreview: "large",
+  },
+};
+
+
+
+
 import Link from "next/link"
 import CareerForm from "../../components/Career-form"
 import PageBanner from "@/components/PageBanner"
@@ -112,16 +165,17 @@ export default function CareersPage() {
                 ],
               },
               {
-                title: "3D Visualizer",
-                type: "Remote",
-                badgeColor: "info",
-                description: "Bring ideas to life with realistic 3D renders and walkthroughs.",
+                title: "Interior Supervisor",
+                type: "On-Site",
+                badgeColor: "primary",
+                description: "Oversee and coordinate interior site execution to ensure design fidelity and timely completion.",
                 requirements: [
-                  "2+ years of 3D visualization experience",
-                  "Expert in 3ds Max and V-Ray",
-                  "Attention to detail in lighting and materials",
+                  "3+ years of experience in interior site supervision",
+                  "Strong understanding of interior drawings and materials",
+                  "Ability to manage labor, vendors, and site timelines",
                 ],
               },
+
               {
                 title: "Project Coordinator",
                 type: "Full-time",
@@ -146,19 +200,19 @@ export default function CareersPage() {
               },
             ].map((job, i) => (
               <div className="col-md-6" key={i}>
-              <div className="card h-100 border-0 shadow-sm hover-career-card">
+                <div className="card h-100 border-0 shadow-sm hover-career-card">
                   <div className="card-body p-4">
                     <span className={`badge bg-${job.badgeColor} mb-2`}>{job.type}</span>
                     <h3 className="card-title h4">{job.title}</h3>
                     <p className="card-text">{job.description}</p>
                     <ul className="list-unstyled">
                       {job.requirements.map((req, j) => (
-                      <li key={j} className="d-flex align-items-start">
-  <span className="icon-wrapper me-2">
-    <CheckCircle className="text-success" size={18} />
-  </span>
-  <span className="text-wrapper">{req}</span>
-</li>
+                        <li key={j} className="d-flex align-items-start">
+                          <span className="icon-wrapper me-2">
+                            <CheckCircle className="text-success" size={18} />
+                          </span>
+                          <span className="text-wrapper">{req}</span>
+                        </li>
 
                       ))}
                     </ul>

@@ -1,3 +1,57 @@
+export const metadata = {
+  title: "Best Interior Design Company in Delhi NCR - Sense Interiors Pvt Ltd.",
+  description:
+    "Sense Interiors Pvt. Ltd. is a leading interior design company in Delhi NCR. We cover the residential, commercial, and industrial sectors. Book a consultation now!",
+  keywords: [
+    "Interior Design Company",
+    "interior design firm",
+    "Interior Designers in Delhi",
+    "residential interior designers",
+    "commercial interior designers",
+    "corporate interior design Delhi",
+    "interior decorators in Delhi NCR",
+    "top interior design firm Delhi",
+    "Delhi interior company",
+    "office interior designers",
+    "hospitality interior designers"
+  ],
+  metadataBase: new URL("https://senseinteriors.in"),
+  alternates: {
+    canonical: "/interior-design-company-in-delhi",
+    types: {
+      "application/rss+xml": [
+        {
+          title: "Interior designers in Delhi, Noida, Gurgaon, office interior designer in Delhi » Feed",
+          url: "https://senseinteriors.in/feed/",
+        },
+        {
+          title: "Interior designers in Delhi, Noida, Gurgaon, office interior designer in Delhi » Comments Feed",
+          url: "https://senseinteriors.in/comments/feed/",
+        },
+      ],
+    },
+  },
+  openGraph: {
+    title: "Interiors Design Services in Delhi NCR, Commercial and Residential Interior Design in Delhi NCR",
+    description:
+      "Best Interior Designers in Delhi NCR - Sense Interiors offers residential, corporate, retail, hospitality, industrial, and institutional interior design services. Call our interior decorators in Delhi now.",
+    url: "https://senseinteriors.in/interior-design-company-in-delhi",
+    siteName: "Sense Interiors",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    maxSnippet: -1,
+    maxVideoPreview: -1,
+    maxImagePreview: "large",
+  },
+};
+
+
+
+
+
 import CallToActionSection from "@/components/Call-to-action-section";
 import Navbar from "@/components/Navbar";
 import PageBanner from "@/components/PageBanner";

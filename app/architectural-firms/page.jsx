@@ -1,3 +1,54 @@
+export const metadata = {
+  title: "Architectural Firms in Delhi | Architects in Delhi - Sense Interiors",
+  description:
+    "Looking for the best architectural firms in Delhi? Sense Interiors provides expert architectural designs and turnkey solutions. Call us at +91-9821995637 for quotes.",
+  keywords: [
+    "architectural firms in delhi",
+    "Architects in Delhi",
+    "best architects in delhi",
+    "architectural services Delhi NCR",
+    "top architecture companies in Delhi",
+    "commercial architects Delhi",
+    "residential architects in Delhi",
+    "modern architecture design",
+    "office architects in Delhi",
+    "interior and architecture firm"
+  ],
+  metadataBase: new URL("https://senseinteriors.in"),
+  alternates: {
+    canonical: "/architectural-firms",
+    types: {
+      "application/rss+xml": [
+        {
+          title: "Interior designers in Delhi, Noida, Gurgaon, office interior designer in Delhi » Feed",
+          url: "https://senseinteriors.in/feed/",
+        },
+        {
+          title: "Interior designers in Delhi, Noida, Gurgaon, office interior designer in Delhi » Comments Feed",
+          url: "https://senseinteriors.in/comments/feed/",
+        },
+      ],
+    },
+  },
+  openGraph: {
+    title: "Architectural Firms in Delhi | Architects in Delhi - Sense Interiors",
+    description:
+      "Looking for the best Architectural firms in Delhi? Sense Interiors provides expert designs and solutions. Call us at +91-9821995637 for quotes.",
+    url: "https://senseinteriors.in/architectural-firms",
+    siteName: "Sense Interiors",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    maxSnippet: -1,
+    maxVideoPreview: -1,
+    maxImagePreview: "large",
+  },
+};
+
+
+
 import Navbar from "@/components/Navbar";
 import PageBanner from "@/components/PageBanner";
 import InternalServiceSection from '../../components/InternalServiceSection';

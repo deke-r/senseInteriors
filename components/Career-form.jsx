@@ -1,43 +1,34 @@
 "use client"
 
-
-
 import { useState } from "react"
+import { useForm } from "react-hook-form"
+import axios from "axios"
 
 export default function CareerForm() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-    position: "Not specified",
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleChange = (e) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }))
-  }
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm()
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
+  const onSubmit = async (data) => {
+    console.log('data: ', data);
     setIsSubmitting(true)
-
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
-
-    console.log("Form submitted:", formData)
-    setIsSubmitting(false)
-    setSubmitted(true)
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-      position: "Not specified",
-    })
+    try {
+      const response = await axios.post("/api/career-form", data)
+      console.log("Server response:", response.data)
+      setSubmitted(true)
+      reset()
+    } catch (error) {
+      console.error("Submission failed:", error)
+      alert("Something went wrong. Please try again later.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -52,21 +43,19 @@ export default function CareerForm() {
           </button>
         </div>
       ) : (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit(onSubmit)} noValidate>
           <div className="mb-3">
             <label htmlFor="name" className="form-label card-text">
               Full Name
             </label>
             <input
               type="text"
-              className="form-control py-2"
+              className={`form-control py-2 ${errors.name ? "is-invalid" : ""}`}
               id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
               placeholder="Enter your full name"
+              {...register("name", { required: "Full name is required" })}
             />
+            {errors.name && <div className="invalid-feedback">{errors.name.message}</div>}
           </div>
 
           <div className="mb-3">
@@ -75,14 +64,18 @@ export default function CareerForm() {
             </label>
             <input
               type="email"
-              className="form-control py-2"
+              className={`form-control py-2 ${errors.email ? "is-invalid" : ""}`}
               id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
               placeholder="Enter your email address"
+              {...register("email", {
+                required: "Email is required",
+                pattern: {
+                  value: /^\S+@\S+$/i,
+                  message: "Invalid email address",
+                },
+              })}
             />
+            {errors.email && <div className="invalid-feedback">{errors.email.message}</div>}
           </div>
 
           <div className="mb-3">
@@ -92,15 +85,14 @@ export default function CareerForm() {
             <select
               className="form-select py-2"
               id="position"
-              name="position"
-              value={formData.position}
-              onChange={handleChange}
+              defaultValue="Not specified"
+              {...register("position")}
             >
               <option value="Not specified">Select a position (optional)</option>
-              <option value="Senior Next.js Developer">Senior Next.js Developer</option>
-              <option value="UX/UI Designer">UX/UI Designer</option>
-              <option value="Backend Developer">Backend Developer</option>
-              <option value="Junior Next.js Developer">Junior Next.js Developer</option>
+              <option value="Senior Interior Designer">Senior Interior Designer</option>
+              <option value="Interior Supervisor">Interior Supervisor</option>
+              <option value="Project Coordinator">Project Coordinator</option>
+              <option value="Design Intern">Design Intern</option>
               <option value="Other">Other</option>
             </select>
           </div>
@@ -110,19 +102,21 @@ export default function CareerForm() {
               Message
             </label>
             <textarea
-              className="form-control py-2"
+              className={`form-control py-2 ${errors.message ? "is-invalid" : ""}`}
               id="message"
-              name="message"
               rows={5}
-              value={formData.message}
-              onChange={handleChange}
-              required
               placeholder="Tell us about yourself and why you're interested in this position"
+              {...register("message", { required: "Message is required" })}
             ></textarea>
+            {errors.message && <div className="invalid-feedback">{errors.message.message}</div>}
           </div>
 
           <div className="d-grid">
-            <button type="submit" className="btn btn-primary text-light fw-semibold btn-lg" disabled={isSubmitting}>
+            <button
+              type="submit"
+              className="btn btn-primary text-light fw-semibold btn-lg"
+              disabled={isSubmitting}
+            >
               {isSubmitting ? (
                 <>
                   <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
