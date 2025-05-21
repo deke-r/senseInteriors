@@ -61,7 +61,7 @@ import ServicesSkillSection from "../components/Services-skill-section"
 import BackgroundContentSection from "../components/Background-content-section"
 import ClientsSection from "../components/Clients-section"
 import TestimonialsSection from "../components/Testimonials-section"
-import Footer from "../components/Footer"
+
 
 import { designServices, whyChooseUs, serviceSkills, testimonials } from "@/data/content"
 

@@ -225,7 +225,7 @@ export default function PortfolioPage() {
 function PortfolioItem({ category, imageSrc, altText }) {
   return (
     <div className="portfolio" data-cat={category} style={{ display: "inline-block" }}>
-      <div className="portfolio-wrapper" data-aos="fade-right">
+      <div className="portfolio-wrapper">
         <div className="portfolio-bg">
           <Image src={imageSrc || "/placeholder.svg"} alt={altText} width={400} height={300} />
         </div>
