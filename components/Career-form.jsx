@@ -114,7 +114,7 @@ export default function CareerForm() {
           <div className="d-grid">
             <button
               type="submit"
-              className="btn btn-primary text-light fw-semibold btn-lg"
+              className="btn bg-b text-light fw-semibold btn-lg"
               disabled={isSubmitting}
             >
               {isSubmitting ? (
