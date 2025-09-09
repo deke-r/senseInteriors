@@ -11,6 +11,7 @@ import AOS from 'aos'
 import Bootstrap from '../libs/Bootstrap'
 import Footer from '../components/Footer'
 import TawkToWidget from '@/components/TawkToWidget'
+import WhatsAppButton from '@/components/WhatsAppButton'
 
 export default function RootLayout({ children }) {
   const pathname = usePathname()
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
       <body className="d-flex flex-column min-vh-100">
         <Bootstrap />
         <TawkToWidget />
+        <WhatsAppButton/>
         <main className="flex-grow-1">{children}</main>
         {shouldShowFooter && <Footer />}
       </body>
