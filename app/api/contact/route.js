@@ -20,7 +20,7 @@ export async function POST(request) {
     const recipients = [
       'senseprojects@yahoo.com',
       'senseprojects2019@gmail.com',
-      'info@senseprojects.in'
+      'info@senseinteriors.in'
     ]
 
     await transporter.sendMail({
