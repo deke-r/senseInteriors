@@ -41,6 +41,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-5DGFVS83');`,
           }}
         />
+
+        {/* JSON-LD Structured Data for SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "InteriorDesignService",
+              "name": "Sense Interiors",
+              "url": "https://senseinteriors.in",
+              "logo": "https://senseinteriors.in/images/logo.png",
+              "image": "https://senseinteriors.in/images/office-interior.jpg",
+              "description": "Sense Interiors offers premier interior design, architecture, and turnkey project solutions with expert consultancy across Delhi NCR.",
+              "slogan": "Luxury Interiors | Turnkey Solutions | Architectural Excellence",
+              "telephone": "+91-9821995637",
+              "email": "info@senseinteriors.in",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "A-123, Sector 63",
+                "addressLocality": "Noida",
+                "addressRegion": "Delhi NCR",
+                "postalCode": "201301",
+                "addressCountry": "IN"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "28.6280",
+                "longitude": "77.3649"
+              },
+              "areaServed": ["Delhi","Noida","Gurugram","Ghaziabad","Faridabad","NCR"],
+              "priceRange": "₹₹₹",
+              "openingHours": ["Mo-Sa 10:00-19:00"],
+              "sameAs": [
+                "https://www.facebook.com/senseinteriors",
+                "https://www.instagram.com/senseinteriors",
+                "https://www.linkedin.com/company/senseinteriors"
+              ]
+            }),
+          }}
+        />
       </head>
       <body className="d-flex flex-column min-vh-100">
         {/* Google Tag Manager (noscript) */}
