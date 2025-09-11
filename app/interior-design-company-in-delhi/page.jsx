@@ -13,7 +13,8 @@ export const metadata = {
     "top interior design firm Delhi",
     "Delhi interior company",
     "office interior designers",
-    "hospitality interior designers"
+    "hospitality interior designers",
+    "commercial interior designers in delhi", "Top commercial interior designers in delhi", "interior design corporate offices in delhi ncr", "best corporate office interior designer in delhi ncr", "Affordable interior designer in delhi ncr", "best office interior design companies in delhi ncr", "best office interior designer in delhi ncr"
   ],
   metadataBase: new URL("https://senseinteriors.in"),
   alternates: {

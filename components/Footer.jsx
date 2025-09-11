@@ -97,7 +97,7 @@ export default function Footer() {
           <div className="row">
             <div className="col-md-12 text-center">
               <p className="mb-0 f_14">
-                Complete Solution for Interior Design and Architectural Service in Delhi NCR. Copyright 2004 ~ 2026
+                Complete Solution for Interior Design and Architectural Service in Delhi NCR. Copyright 2004 ~ 2025
                 Sense Interiors Pvt Ltd All rights reserved.
               </p>
             </div>

@@ -23,7 +23,10 @@ export const metadata = {
     "End-to-End Interior Solutions",
     "Top Architecture Firms in Delhi",
     "Interior Design Consultancy",
-    "Renovation Services in Delhi NCR"
+    "Renovation Services in Delhi NCR",
+    "office interior designers in delhi ncr",
+    "corporate office interior designer in noida",
+    "Affordable commercial interior designers in delhi"
   ],
   metadataBase: new URL("https://senseinteriors.in"),
   alternates: {

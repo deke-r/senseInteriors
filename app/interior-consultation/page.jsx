@@ -195,14 +195,14 @@ export default function Home() {
                 height={300}
               />
             </div>
-            <div className={styles.projectItem}>
+            {/* <div className={styles.projectItem}>
               <Image
                 src="/img/ofin/7.webp"
                 alt="Sense Interiors project"
                 width={400}
                 height={300}
               />
-            </div>
+            </div> */}
             {/* <div className={styles.projectItem}>
               <Image
                 src="/img/tidy-bathroom-with-shiny-tiles_1203-1501.webp"
