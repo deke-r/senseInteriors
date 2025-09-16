@@ -15,7 +15,7 @@ import WhatsAppButton from '@/components/WhatsAppButton'
 
 export default function RootLayout({ children }) {
   const pathname = usePathname()
-  
+
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -41,7 +41,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-5DGFVS83');`,
           }}
         />
-
+        
+           {/* Google Ads Global site tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11256277555"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-11256277555');
+            `,
+          }}
+        />
+        
         {/* JSON-LD Structured Data for SEO */}
         <script
           type="application/ld+json"
@@ -70,7 +83,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 "latitude": "28.6280",
                 "longitude": "77.3649"
               },
-              "areaServed": ["Delhi","Noida","Gurugram","Ghaziabad","Faridabad","NCR"],
+              "areaServed": ["Delhi", "Noida", "Gurugram", "Ghaziabad", "Faridabad", "NCR"],
               "priceRange": "₹₹₹",
               "openingHours": ["Mo-Sa 10:00-19:00"],
               "sameAs": [
