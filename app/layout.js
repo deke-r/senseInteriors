@@ -31,6 +31,20 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+
+        {/* ✅ Microsoft Clarity */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(c,l,a,r,i,t,y){
+                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "tfmrrsalpw");
+            `,
+          }}
+        />
+
         {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{
@@ -41,8 +55,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-5DGFVS83');`,
           }}
         />
-        
-           {/* Google Ads Global site tag (gtag.js) */}
+        {/* End Google Tag Manager */}
+
+        {/* Google Ads Global site tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11256277555"></script>
         <script
           dangerouslySetInnerHTML={{
@@ -54,7 +69,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             `,
           }}
         />
-        
+
         {/* JSON-LD Structured Data for SEO */}
         <script
           type="application/ld+json"
@@ -94,7 +109,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }),
           }}
         />
+
       </head>
+
       <body className="d-flex flex-column min-vh-100">
         {/* Google Tag Manager (noscript) */}
         <noscript>
@@ -109,6 +126,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <Bootstrap />
         <TawkToWidget />
         <WhatsAppButton />
+
         <main className="flex-grow-1">{children}</main>
         {shouldShowFooter && <Footer />}
       </body>
